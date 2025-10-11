@@ -1,0 +1,231 @@
+// TypeScript types
+import { Rocket, Target, Zap, Code, Cloud, Database, Users } from 'lucide-react';
+
+export type Role = {
+  title: string;
+  period: string;
+  achievements: string[];
+  technologies: string[];
+};
+
+export type Company = {
+  company: string;
+  period: string;
+  location: string;
+  description: string;
+  icon: any;
+  side: 'left' | 'right';
+  companyLogo: string;
+  companyFallback: string;
+  roles: Role[];
+};
+
+export const engineeringJourney: Company[] = [
+  {
+    company: "Gartner Digital Markets",
+    period: "May 2022 — Present",
+    location: "Barcelona, Spain",
+    description: "Reviews Platform team powering all Gartner Digital Markets marketplaces (Capterra, GetApp, Software Advice). Processing millions of software reviews to generate reliable, actionable insights.",
+    icon: Rocket,
+    side: "left",
+    companyLogo: "https://emt.gartnerweb.com/ngw/commonassets/images/build-graphics/gartner-logos/gartner.svg",
+    companyFallback: "GDM",
+    roles: [
+      {
+        title: "Senior Software Engineer",
+        period: "October 2023 — Present",
+        achievements: [
+          "Leading junior and mid-level engineers, conducting technical interviews and code reviews",
+          "Defining and implementing transversal architectural standards across teams",
+          "Leading complex initiatives that span multiple teams and impact business metrics",
+          "Working closely with Product, SEO, and Site teams on strategic initiatives",
+          "Leading efforts to improve system performance, reliability, and operational efficiency"
+        ],
+        technologies: ["C#", ".NET 8", ".NET 9", "TypeScript", "Next.js", "React", "PostgreSQL", "Kafka", "AWS EKS", "OpenSearch"]
+      },
+      {
+        title: "Software Advanced Engineer",
+        period: "May 2022 — October 2023", 
+        achievements: [
+          "Designed and maintained pipelines transforming reviews into quality insights",
+          "Led the refactor of the review scoring system into a decoupled, resilient engine",
+          "Built gamification systems incentivizing vendors to collect high-quality reviews",
+          "Evolved the review moderation platform from Angular to Next.js",
+          "Implemented event-driven architectures with Kafka/Confluent Cloud"
+        ],
+        technologies: ["C#", ".NET 6", "TypeScript", "Angular", "Next.js", "React", "PostgreSQL", "Kafka", "AWS"]
+      }
+    ]
+  },
+  {
+    company: "Plain Concepts - SCRM Lidl Digital Hub",
+    period: "September 2019 — May 2022",
+    location: "Barcelona, Spain", 
+    description: "Working on Lidl Plus App project serving more than 60 million users. High-availability backend system based on microservices, cloud, data analysis, and real-time data ingestion.",
+    icon: Target,
+    side: "right",
+    companyLogo: "https://www.plainconcepts.com/wp-content/uploads/2023/01/logo.svg",
+    companyFallback: "PC",
+    roles: [
+      {
+        title: "Backend Sr Software Developer",
+        period: "~March 2020 — May 2022",
+        achievements: [
+          "Migrated monolithic systems to microservices in .NET",
+          "Worked on Communications squad implementing user promotion and notification systems",
+          "Designed and led migration of Alerts system from monolith to microservices",
+          "Upgraded systems from .NET Core 3.1 to .NET 6",
+          "Implemented CQRS + DDD architectures for critical domains"
+        ],
+        technologies: [".NET 6", "C#", "Azure Functions", "Cosmos DB", "Event Hub", "Service Bus", "AKS", "Terraform"]
+      },
+      {
+        title: "IT Support Consultant", 
+        period: "September 2019 — March 2020",
+        achievements: [
+          "Built and maintained internal applications for Customer Support",
+          "Developed tools supporting the Lidl Plus App ecosystem",
+          "Gained foundational experience in enterprise-scale systems",
+          "Collaborated with support teams to improve operational efficiency"
+        ],
+        technologies: [".NET Core", "C#", "Azure", "Internal Tools", "Customer Support Systems"]
+      }
+    ]
+  },
+  {
+    company: "Pasiona Consulting",
+    period: "May 2018 — September 2019",
+    location: "Barcelona, Spain",
+    description: "Dual internship program and early career development focusing on both Front-end and Back-end development with SharePoint Online and Azure Functions.",
+    icon: Zap,
+    side: "left",
+    companyLogo: "https://pasiona.com/wp-content/themes/pasiona_theme/assets/svg/pasiona-logo.svg",
+    companyFallback: "PA",
+    roles: [
+      {
+        title: "Junior Developer",
+        period: "June 2019 — September 2019",
+        achievements: [
+          "Developed SPFx components with React.js in TypeScript for SharePoint Online",
+          "Built Azure Functions operating as orchestrators for different services", 
+          "Worked with multitasking programming and Test Driven Development methodology",
+          "Used Azure DevOps: Azure Boards (SCRUM), Azure Repos (Git Flow), Azure Pipelines (CI/CD)",
+          "Obtained and analyzed data to assess system capabilities"
+        ],
+        technologies: ["React.js", "TypeScript", "SharePoint SPFx", "Azure Functions", "Azure DevOps", "SCRUM", "TDD"]
+      },
+      {
+        title: "Trainee Developer",
+        period: "May 2018 — June 2019", 
+        achievements: [
+          "Dual internship program focusing on full-stack development while studying",
+          "Backend development with .NET & .NET Core Framework, ASP.NET & ASP.NET Core",
+          "Learned and applied Domain Driven Design paradigm and Test Driven Development",
+          "Frontend development with React.js ES6, TypeScript, HTML5",
+          "Published and tracked App Services in Azure, implemented comprehensive unit testing"
+        ],
+        technologies: [".NET Framework", ".NET Core", "ASP.NET Core", "Entity Framework", "React.js", "TypeScript", "Azure"]
+      }
+    ]
+  }
+];
+
+export type Education = {
+  degree: string;
+  institution: string;
+  period: string;
+  description: string;
+  logo: string;
+};
+
+export const education: Education[] = [
+  {
+    degree: "Computer Engineering",
+    institution: "Polytechnic University of Madrid",
+    period: "2015 — 2019",
+    description: "Specialized in Software Engineering and Distributed Systems",
+    logo: "🎓"
+  },
+  {
+    degree: "AWS Certified Solutions Architect",
+    institution: "Amazon Web Services",
+    period: "2023",
+    description: "Professional certification for cloud architecture and best practices",
+    logo: "☁️"
+  }
+];
+
+export type SkillGroup = {
+  category: string;
+  items: { name: string; level: number }[];
+  icon: any;
+  color: string;
+};
+
+export const skills: SkillGroup[] = [
+  {
+    category: "Backend Technologies",
+    items: [
+      { name: "C# / .NET", level: 95 },
+      { name: "Node.js", level: 88 },
+      { name: "Python", level: 85 },
+      { name: "Go", level: 80 }
+    ],
+    icon: Code,
+    color: "from-blue-500 to-blue-600"
+  },
+  {
+    category: "Cloud & Infrastructure",
+    items: [
+      { name: "AWS", level: 92 },
+      { name: "Azure", level: 90 },
+      { name: "Docker/Kubernetes", level: 88 },
+      { name: "Terraform", level: 82 }
+    ],
+    icon: Cloud,
+    color: "from-purple-500 to-purple-600"
+  },
+  {
+    category: "Data & Messaging",
+    items: [
+      { name: "PostgreSQL", level: 93 },
+      { name: "Apache Kafka", level: 90 },
+      { name: "Redis", level: 88 },
+      { name: "MongoDB", level: 85 }
+    ],
+    icon: Database,
+    color: "from-green-500 to-green-600"
+  },
+  {
+    category: "Architecture & Design",
+    items: [
+      { name: "Microservices", level: 94 },
+      { name: "Event-Driven Architecture", level: 92 },
+      { name: "CQRS/DDD", level: 90 },
+      { name: "System Design", level: 95 }
+    ],
+    icon: Users,
+    color: "from-orange-500 to-orange-600"
+  }
+];
+
+export type Language = {
+  name: string;
+  level: number;
+  description: string;
+};
+
+export const languages: Language[] = [
+  { name: "Spanish", level: 100, description: "Native" },
+  { name: "English", level: 90, description: "Fluent" },
+  { name: "French", level: 70, description: "Intermediate" },
+  { name: "Arabic", level: 85, description: "Advanced" }
+];
+
+export const profile = {
+  name: "Amin Chouaibi El Azaar",
+  title: "Senior Backend Engineer",
+  summary: `Passionate about technology, software engineering, and security. My journey started in Madrid, where curiosity for distributed systems and cloud architecture shaped my career. I believe in building reliable, scalable, and secure systems that empower people and businesses. Technology is not just a tool, but a way to solve real-world problems and create meaningful impact.`,
+  location: "Madrid, Spain",
+  interests: ["Distributed Systems", "Cloud Architecture", "Security", "AI", "Open Source"]
+};
