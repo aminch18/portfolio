@@ -222,10 +222,79 @@ export const languages: Language[] = [
   { name: "Arabic", level: 85, description: "Advanced" }
 ];
 
+export type Project = {
+  title: string;
+  description: string;
+  longDescription: string;
+  technologies: string[];
+  highlights: string[];
+  link?: string;
+  github?: string;
+  image?: string;
+  status: "completed" | "in-progress" | "planned";
+};
+
+export const projects: Project[] = [
+  {
+    title: "Distributed Review Processing System",
+    description: "High-throughput event-driven system processing millions of software reviews",
+    longDescription: "Built a scalable microservices architecture that ingests, validates, and enriches software reviews from multiple sources. Implemented event sourcing with Kafka for reliable data processing and implemented sophisticated NLP pipelines for sentiment analysis and quality scoring.",
+    technologies: ["C#", ".NET 8", "Kafka", "PostgreSQL", "OpenSearch", "AWS EKS", "Redis"],
+    highlights: [
+      "Processing 1M+ reviews monthly with <100ms p99 latency",
+      "99.95% uptime with automatic failover and recovery",
+      "Reduced data inconsistencies by 90% through event sourcing",
+      "Implemented real-time quality scoring affecting $50M+ in revenue"
+    ],
+    status: "completed"
+  },
+  {
+    title: "Multi-Tenant Analytics Platform",
+    description: "Real-time analytics platform serving insights to millions of users",
+    longDescription: "Designed and implemented a multi-tenant analytics system that aggregates review data and generates actionable insights. Built RESTful and GraphQL APIs with sophisticated caching strategies and query optimization to handle high-traffic loads.",
+    technologies: ["TypeScript", "Next.js", "GraphQL", "PostgreSQL", "Redis", "AWS Lambda"],
+    highlights: [
+      "Serving 10M+ API requests daily",
+      "Reduced query response time by 70% through caching",
+      "Built comprehensive monitoring with custom Datadog dashboards",
+      "Implemented A/B testing framework affecting product decisions"
+    ],
+    status: "completed"
+  },
+  {
+    title: "Cloud Infrastructure Automation",
+    description: "Infrastructure-as-Code solution for multi-region AWS deployments",
+    longDescription: "Led migration from monolithic infrastructure to modular Terraform configurations. Implemented GitOps workflows with automated testing, security scanning, and progressive deployments across multiple environments.",
+    technologies: ["Terraform", "AWS", "EKS", "GitHub Actions", "Helm", "ArgoCD"],
+    highlights: [
+      "Reduced deployment time from 2 hours to 15 minutes",
+      "Zero-downtime deployments with automated rollback",
+      "95% cost reduction through resource optimization",
+      "Implemented disaster recovery with <5min RTO"
+    ],
+    status: "completed"
+  },
+  {
+    title: "AI-Powered Code Review Assistant",
+    description: "Intelligent code review system using LLMs for automated feedback",
+    longDescription: "Building an AI assistant that analyzes pull requests, suggests improvements, detects security vulnerabilities, and ensures code quality standards. Integrates with GitHub and provides contextual feedback based on repository-specific patterns.",
+    technologies: ["Python", "OpenAI GPT-4", "LangChain", "FastAPI", "PostgreSQL", "Docker"],
+    highlights: [
+      "Analyzing 500+ PRs weekly across multiple repositories",
+      "Detecting 40+ security issues before production",
+      "Reducing code review time by 30%",
+      "Training custom models on internal codebase"
+    ],
+    status: "in-progress",
+    github: "https://github.com"
+  }
+];
+
 export const profile = {
   name: "Amin Chouaibi El Azaar",
   title: "Senior Backend Engineer",
   summary: `Passionate about technology, software engineering, and security. My journey started in Madrid, where curiosity for distributed systems and cloud architecture shaped my career. I believe in building reliable, scalable, and secure systems that empower people and businesses. Technology is not just a tool, but a way to solve real-world problems and create meaningful impact.`,
   location: "Madrid, Spain",
-  interests: ["Distributed Systems", "Cloud Architecture", "Security", "AI", "Open Source"]
+  interests: ["Distributed Systems", "Cloud Architecture", "Security", "AI", "Open Source"],
+  photo: "https://media.licdn.com/dms/image/v2/D4D03AQFifrbYAS7S0g/profile-displayphoto-scale_200_200/B4DZoWWCMfJcAY-/0/1761311467201?e=1763596800&v=beta&t=dIyDiBEsfUcqWsp4jwGb3lPwBwS16jDOQlBCs3aDu_M"
 };
