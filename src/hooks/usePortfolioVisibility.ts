@@ -12,22 +12,45 @@ export function usePortfolioVisibility() {
     observerRef.current = new IntersectionObserver(
       (entries) => {
         entries.forEach((entry) => {
+          const sectionId = entry.target.id;
+          
           if (entry.isIntersecting) {
             setVisibleSections((prev) => {
               const newSet = new Set(prev);
-              newSet.add(entry.target.id);
+              newSet.add(sectionId);
+              
+              // If a company card is visible, keep the parent journey section visible
+              if (sectionId.startsWith('company-')) {
+                newSet.add('journey');
+              }
+              // If a role card is visible, keep its parent company visible
+              if (sectionId.startsWith('role-')) {
+                const companyIndex = sectionId.split('-')[1];
+                newSet.add(`company-${companyIndex}`);
+              }
+              
               return newSet;
             });
           } else {
             setVisibleSections((prev) => {
               const newSet = new Set(prev);
-              newSet.delete(entry.target.id);
+              
+              // Only remove journey section if no company cards are visible
+              if (sectionId === 'journey') {
+                const hasVisibleCompany = Array.from(newSet).some(id => id.startsWith('company-'));
+                if (!hasVisibleCompany) {
+                  newSet.delete(sectionId);
+                }
+              } else {
+                newSet.delete(sectionId);
+              }
+              
               return newSet;
             });
           }
         });
       },
-      { threshold: 0.3, rootMargin: "0px 0px -50px 0px" }
+      { threshold: 0.2, rootMargin: "0px 0px -100px 0px" }
     );
 
     // Observe all sections after component mounts

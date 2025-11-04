@@ -298,5 +298,7 @@ export const profile = {
   interests: ["Distributed Systems", "Cloud Architecture", "Security", "AI", "Open Source"],
   photo: "https://media.licdn.com/dms/image/v2/D4D03AQFifrbYAS7S0g/profile-displayphoto-scale_200_200/B4DZoWWCMfJcAY-/0/1761311467201?e=1763596800&v=beta&t=dIyDiBEsfUcqWsp4jwGb3lPwBwS16jDOQlBCs3aDu_M",
   linkedin: "https://www.linkedin.com/in/amin-chouaibi-el-azaar/",
-  github: "https://github.com/aminch18"
+  github: "https://github.com/aminch18",
+  phone: "+34643174896",
+  email: "experimentalaminch@outlook.com"
 };

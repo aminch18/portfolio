@@ -25,7 +25,7 @@ export function ProjectCard({ project, index, isVisible }: ProjectCardProps) {
 
   return (
     <div
-      className={`card backdrop-blur-sm rounded-2xl p-6 transform transition-all duration-1000 relative ${
+      className={`card backdrop-blur-sm rounded-2xl p-6 transform transition-all duration-500 relative ${
         isExpanded ? "" : "hover:scale-105 cursor-pointer"
       } ${
         isVisible

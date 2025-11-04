@@ -44,7 +44,7 @@ export function CompanyCard({
           } px-2 lg:px-0`}
         >
           <div
-            className={`card backdrop-blur-sm rounded-2xl p-4 lg:p-6 transform transition-all duration-1000 cursor-pointer relative ${
+            className={`card backdrop-blur-sm rounded-2xl p-4 lg:p-6 transform transition-all duration-500 cursor-pointer relative ${
               isExpanded ? "" : "hover:scale-105"
             } ${
               isVisible

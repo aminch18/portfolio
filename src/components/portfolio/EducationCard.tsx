@@ -21,7 +21,7 @@ export function EducationCard({
 }: EducationCardProps) {
   return (
     <div
-      className={`card backdrop-blur-sm rounded-2xl p-6 transform transition-all duration-1000 hover:scale-105 relative ${
+      className={`card backdrop-blur-sm rounded-2xl p-6 transform transition-all duration-500 hover:scale-105 relative ${
         isVisible
           ? "translate-y-0 opacity-100"
           : "translate-y-10 opacity-0"

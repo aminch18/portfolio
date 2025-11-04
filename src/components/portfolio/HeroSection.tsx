@@ -1,13 +1,18 @@
-import React from "react";
+"use client";
+import React, { useState } from "react";
 import { Mail, MapPin, Download, Phone, Linkedin, Github } from "lucide-react";
 import { profile } from "../../data/profileData";
+import { ContactForm } from "./ContactForm";
 
 interface HeroSectionProps {
   isLoaded: boolean;
 }
 
 export function HeroSection({ isLoaded }: HeroSectionProps) {
+  const [isContactFormOpen, setIsContactFormOpen] = useState(false);
+
   return (
+    <>
     <section
       id="home"
       className="relative min-h-screen flex items-center justify-center px-6"
@@ -56,14 +61,14 @@ export function HeroSection({ isLoaded }: HeroSectionProps) {
             {profile.title}
           </h2>
 
-          <div className="flex items-center justify-center gap-6 mb-8 text-[var(--text-secondary)]">
+          <div className="flex flex-wrap items-center justify-center gap-4 sm:gap-6 mb-8 text-[var(--text-secondary)]">
             <div className="flex items-center gap-2 text-[var(--text-secondary)]">
               <MapPin className="w-5 h-5" />
               <span>{profile.location}</span>
             </div>
             <div className="flex items-center gap-2 text-[var(--text-secondary)]">
               <Mail className="w-5 h-5" />
-              <span>amin@example.com</span>
+              <span className="text-sm sm:text-base break-all">{profile.email}</span>
             </div>
           </div>
 
@@ -76,7 +81,8 @@ export function HeroSection({ isLoaded }: HeroSectionProps) {
           </p>
 
           <div className="flex flex-col sm:flex-row gap-4 justify-center mb-8">
-            <button 
+            <button
+              onClick={() => setIsContactFormOpen(true)}
               className="flex items-center justify-center gap-3 px-8 py-4 rounded-xl font-semibold transform transition-all duration-300 hover:scale-105 hover:shadow-xl" 
               style={{
                 background: 'var(--accent-primary)',
@@ -84,9 +90,10 @@ export function HeroSection({ isLoaded }: HeroSectionProps) {
               }}
             >
               <Download className="w-5 h-5" style={{ color: '#ffffff' }} />
-              <span style={{ color: '#ffffff' }}>Download CV</span>
+              <span style={{ color: '#ffffff' }}>Request CV</span>
             </button>
-            <button 
+            <a
+              href={`tel:${profile.phone}`}
               className="flex items-center justify-center gap-3 px-8 py-4 rounded-xl font-semibold transform transition-all duration-300 hover:scale-105" 
               style={{
                 border: '2px solid var(--border-primary)',
@@ -96,7 +103,7 @@ export function HeroSection({ isLoaded }: HeroSectionProps) {
             >
               <Phone className="w-5 h-5" style={{ color: 'var(--accent-primary)' }} />
               <span style={{ color: 'var(--text-primary)' }}>Let's Talk</span>
-            </button>
+            </a>
           </div>
 
           {/* Social Links */}
@@ -131,5 +138,8 @@ export function HeroSection({ isLoaded }: HeroSectionProps) {
         </div>
       </div>
     </section>
+
+    <ContactForm isOpen={isContactFormOpen} onClose={() => setIsContactFormOpen(false)} />
+    </>
   );
 }

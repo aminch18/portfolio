@@ -11,9 +11,20 @@ export default function ThemeSwitcher({ menuPosition }: ThemeSwitcherProps) {
   const [theme, setTheme] = useState("light");
 
   useEffect(() => {
+    // Check for saved theme preference or default to system preference
     const saved = localStorage.getItem(THEME_KEY);
-    if (saved) setTheme(saved);
-    document.documentElement.setAttribute("data-theme", saved || "light");
+    let initialTheme: string;
+    
+    if (saved) {
+      initialTheme = saved;
+    } else {
+      // Detect system theme preference
+      const prefersDark = window.matchMedia("(prefers-color-scheme: dark)").matches;
+      initialTheme = prefersDark ? "dark" : "light";
+    }
+    
+    setTheme(initialTheme);
+    document.documentElement.setAttribute("data-theme", initialTheme);
     
     // Add transition class after initial render
     document.documentElement.style.transition = "background 0.5s ease, color 0.5s ease";
