@@ -1,5 +1,5 @@
 import React from "react";
-import { Mail, MapPin, Download, Phone } from "lucide-react";
+import { Mail, MapPin, Download, Phone, Linkedin, Github } from "lucide-react";
 import { profile } from "../../data/profileData";
 
 interface HeroSectionProps {
@@ -19,7 +19,7 @@ export function HeroSection({ isLoaded }: HeroSectionProps) {
             isLoaded ? "scale-100 opacity-100" : "scale-50 opacity-0"
           }`}
         >
-          <div className="relative mx-auto w-40 h-40 mt-16 md:mt-0">
+          <div className="relative mx-auto w-40 h-40 mt-16 md:mt-20">
             <div className="absolute inset-0 rounded-full animate-pulse" style={{ background: 'var(--accent-primary)', opacity: 0.3 }}></div>
             <div className="absolute inset-2 bg-[var(--bg-primary)] rounded-full flex items-center justify-center overflow-hidden">
               <img 
@@ -75,7 +75,7 @@ export function HeroSection({ isLoaded }: HeroSectionProps) {
             <span className="text-[var(--accent-primary)] font-semibold"> high-performance systems</span>.
           </p>
 
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+          <div className="flex flex-col sm:flex-row gap-4 justify-center mb-8">
             <button 
               className="flex items-center justify-center gap-3 px-8 py-4 rounded-xl font-semibold transform transition-all duration-300 hover:scale-105 hover:shadow-xl" 
               style={{
@@ -97,6 +97,36 @@ export function HeroSection({ isLoaded }: HeroSectionProps) {
               <Phone className="w-5 h-5" style={{ color: 'var(--accent-primary)' }} />
               <span style={{ color: 'var(--text-primary)' }}>Let's Talk</span>
             </button>
+          </div>
+
+          {/* Social Links */}
+          <div className="flex items-center justify-center gap-4">
+            <a
+              href={profile.linkedin}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex items-center justify-center w-12 h-12 rounded-full transition-all duration-300 hover:scale-110"
+              style={{
+                border: '2px solid var(--border-primary)',
+                background: 'var(--bg-secondary)'
+              }}
+              aria-label="LinkedIn"
+            >
+              <Linkedin className="w-5 h-5" style={{ color: 'var(--accent-primary)' }} />
+            </a>
+            <a
+              href={profile.github}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex items-center justify-center w-12 h-12 rounded-full transition-all duration-300 hover:scale-110"
+              style={{
+                border: '2px solid var(--border-primary)',
+                background: 'var(--bg-secondary)'
+              }}
+              aria-label="GitHub"
+            >
+              <Github className="w-5 h-5" style={{ color: 'var(--accent-primary)' }} />
+            </a>
           </div>
         </div>
       </div>

@@ -293,8 +293,10 @@ export const projects: Project[] = [
 export const profile = {
   name: "Amin Chouaibi El Azaar",
   title: "Senior Backend Engineer",
-  summary: `Passionate about technology, software engineering, and security. My journey started in Madrid, where curiosity for distributed systems and cloud architecture shaped my career. I believe in building reliable, scalable, and secure systems that empower people and businesses. Technology is not just a tool, but a way to solve real-world problems and create meaningful impact.`,
-  location: "Madrid, Spain",
+  summary: `Passionate about technology, software engineering, and security. My journey started in Barcelona, where curiosity for distributed systems and cloud architecture shaped my career. I believe in building reliable, scalable, and secure systems that empower people and businesses. Technology is not just a tool, but a way to solve real-world problems and create meaningful impact.`,
+  location: "Barcelona, Spain",
   interests: ["Distributed Systems", "Cloud Architecture", "Security", "AI", "Open Source"],
-  photo: "https://media.licdn.com/dms/image/v2/D4D03AQFifrbYAS7S0g/profile-displayphoto-scale_200_200/B4DZoWWCMfJcAY-/0/1761311467201?e=1763596800&v=beta&t=dIyDiBEsfUcqWsp4jwGb3lPwBwS16jDOQlBCs3aDu_M"
+  photo: "https://media.licdn.com/dms/image/v2/D4D03AQFifrbYAS7S0g/profile-displayphoto-scale_200_200/B4DZoWWCMfJcAY-/0/1761311467201?e=1763596800&v=beta&t=dIyDiBEsfUcqWsp4jwGb3lPwBwS16jDOQlBCs3aDu_M",
+  linkedin: "https://www.linkedin.com/in/amin-chouaibi-el-azaar/",
+  github: "https://github.com/aminch18"
 };

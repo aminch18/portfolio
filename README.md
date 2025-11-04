@@ -1,41 +1,64 @@
 # Amin Chouaibi El Azaar - Portfolio
 
-A professional Next.js portfolio website with a Matrix/DevOps terminal aesthetic showcasing backend engineering expertise.
+A modern, interactive portfolio website built with Next.js showcasing backend engineering expertise and professional experience.
 
 ## 🚀 Features
 
-- **Matrix-inspired UI**: Dark theme with green/cyan accents and terminal aesthetics
-- **Interactive Timeline**: Professional experience displayed chronologically
-- **Tech Skills Showcase**: Technology icons with hover effects and proficiency levels
-- **Responsive Design**: Optimized for all screen sizes
-- **Smooth Navigation**: Scroll-based navigation with active section highlighting
+- **Animated Particle Background**: Interactive particle network with connecting lines across the entire page
+- **Dual Theme Support**: Light theme with olive green accents and dark mode
+- **Interactive Timeline**: Professional journey with expandable company and role cards
+- **Projects Showcase**: Featured projects with expandable details, status badges, and technology stacks
+- **Smooth Animations**: Scroll-based animations and smooth transitions throughout
+- **Responsive Design**: Optimized for all screen sizes with adaptive navigation
 - **TypeScript**: Full type safety throughout the application
-- **TailwindCSS**: Modern utility-first styling
+- **Modern UI**: Clean, professional design with glassmorphism effects
 
 ## 🛠️ Tech Stack
 
 - **Framework**: Next.js 14 with App Router
 - **Language**: TypeScript
-- **Styling**: TailwindCSS with custom Matrix theme
+- **Styling**: TailwindCSS with custom CSS variables for theming
 - **Icons**: Lucide React
-- **Animations**: Framer Motion & CSS animations
+- **Animations**: Canvas-based particle system with custom CSS animations
+- **Deployment**: GitHub Pages with GitHub Actions
 
 ## 📁 Project Structure
 
 ```
 portfolio/
+├── .github/
+│   └── workflows/
+│       └── deploy.yml          # GitHub Actions deployment
 ├── src/
 │   ├── app/
-│   │   ├── globals.css
+│   │   ├── globals.css         # Global styles and theme variables
 │   │   ├── layout.tsx
 │   │   └── page.tsx
-│   └── components/
-│       ├── Navigation.tsx
-│       ├── TerminalHero.tsx
-│       ├── ExperienceTimeline.tsx
-│       ├── TechnicalSkills.tsx
-│       ├── EducationCertifications.tsx
-│       └── PersonalProjects.tsx
+│   ├── components/
+│   │   ├── portfolio/          # Portfolio section components
+│   │   │   ├── HeroSection.tsx
+│   │   │   ├── FloatingNavigation.tsx
+│   │   │   ├── JourneySection.tsx
+│   │   │   ├── CompanyCard.tsx
+│   │   │   ├── RoleCard.tsx
+│   │   │   ├── EducationSection.tsx
+│   │   │   ├── ProjectsSection.tsx
+│   │   │   ├── ProjectCard.tsx
+│   │   │   └── FooterCTA.tsx
+│   │   ├── ui/                 # Shared UI components
+│   │   │   ├── AnimatedBackground.tsx
+│   │   │   └── SectionHeader.tsx
+│   │   ├── ThemeProvider.tsx
+│   │   ├── ThemeSwitcher.tsx
+│   │   └── TimelinePortfolioFixed.tsx
+│   ├── data/
+│   │   └── profileData.ts      # Portfolio content data
+│   └── hooks/                  # Custom React hooks
+│       ├── usePortfolioVisibility.ts
+│       ├── useNavigationState.ts
+│       └── useCompanyExpansion.ts
+├── public/
+│   └── .nojekyll              # GitHub Pages configuration
 ├── package.json
 ├── tailwind.config.js
 ├── tsconfig.json
@@ -44,17 +67,23 @@ portfolio/
 
 ## 🎨 Design System
 
-### Color Palette
-- **Background**: `#0a0a0a` (Matrix Black)
-- **Surface**: `#111111` (Dark Gray)
-- **Primary**: `#00ff41` (Matrix Green)
-- **Secondary**: `#00ffff` (Cyan)
-- **Text**: `#ffffff` (White)
-- **Muted**: `#888888` (Gray)
+### Color Palette (Light Theme)
+- **Background**: `#f8f9fa` → `#e9ecef` (Soft gradient)
+- **Surface**: `#ffffff` (White cards)
+- **Primary Text**: `#1f2937` (Dark gray)
+- **Accent**: `#6b8e23` (Olive green)
+- **Borders**: `#dee2e6` (Light gray)
 
+### Color Palette (Dark Theme)
+- **Background**: `#0f172a` → `#1e293b` (Dark gradient)
+- **Surface**: `rgba(30, 41, 59, 0.6)` (Translucent)
+- **Primary Text**: `#e2e8f0` (Light gray)
+- **Accent**: `#818cf8` (Indigo)
+- **Borders**: `#334155` (Dark borders)
 ### Typography
-- **Primary Font**: Inter (Sans-serif)
-- **Code Font**: JetBrains Mono (Monospace)
+- **Primary Font**: Nunito (Sans-serif)
+- **Heading Font**: Montserrat (Sans-serif)
+- **Code Font**: Recursive (Monospace)
 
 ## 🚦 Getting Started
 
@@ -66,22 +95,18 @@ portfolio/
 
 1. **Clone the repository**
    ```bash
-   git clone <repository-url>
+   git clone https://github.com/aminch18/portfolio.git
    cd portfolio
    ```
 
 2. **Install dependencies**
    ```bash
    npm install
-   # or
-   yarn install
    ```
 
 3. **Run the development server**
    ```bash
    npm run dev
-   # or
-   yarn dev
    ```
 
 4. **Open your browser**
@@ -91,58 +116,126 @@ portfolio/
 
 ```bash
 npm run build
-npm start
+```
+
+The static site will be exported to the `out/` directory.
+
+## 🌐 Deployment
+
+This portfolio is automatically deployed to GitHub Pages using GitHub Actions.
+
+### Deployment Process
+1. Push changes to the `main` branch
+2. GitHub Actions workflow automatically triggers
+3. Site is built and deployed to GitHub Pages
+4. Live at: **https://aminch18.github.io/portfolio/**
+
+### Manual Deployment
+To deploy manually:
+```bash
+npm run build
+# The 'out' folder contains the static export
 ```
 
 ## 📱 Sections
 
 ### 1. Hero Section
-- Terminal-style introduction with typing animation
-- Personal information and contact details
-- Social media links (LinkedIn, GitHub)
+- Profile photo with animated border
+- Professional title and location
+- Contact information
+- Download CV button
+- Animated particle background
 
-### 2. Professional Experience
-- Interactive timeline format
-- Detailed role descriptions
-- Technology stacks for each position
-- Key achievements and highlights
+### 2. Professional Journey
+- Interactive timeline with company cards
+- Expandable role cards with achievements
+- Technology stacks for each role
+- Click to expand for full details
+- Timeline dots connecting experiences
 
-### 3. Technical Skills
-- Categorized skill display
-- Technology icons with proficiency levels
-- Hover effects and animations
-- Covers: Languages, Cloud, Databases, DevOps, Methodologies
-
-### 4. Education & Certifications
+### 3. Education
 - Academic background
-- Professional certifications
-- Language proficiency
-- Status indicators (In Progress, Completed)
+- Institution logos and details
+- Degree and period information
 
-### 5. Personal Projects
-- Placeholder cards for future projects
-- GitHub and live demo links
-- Technology tags
-- "Add New Project" placeholder
+### 4. Featured Projects
+- Expandable project cards
+- Status badges (Completed, In Progress, Planned)
+- Technology stack tags
+- Key highlights and achievements
+- GitHub and external links
+- Long descriptions with full details
+
+### 5. Footer CTA
+- Call-to-action section
+- Contact buttons
+- Professional closing
+
+## ✨ Key Features Explained
+
+### Particle Animation System
+- Canvas-based particle network with 80 particles
+- Dynamic connecting lines between nearby particles (within 150px)
+- Particles bounce off screen edges
+- Smooth animations using requestAnimationFrame
+- Adapts to theme colors automatically
+
+### Theme System
+- Light and dark theme support
+- Persisted in localStorage
+- Smooth transitions between themes
+- CSS variables for consistent theming
+- Compact theme switcher button that moves with navigation
+
+### Responsive Navigation
+- Floating navigation bar
+- Moves from top to bottom on scroll
+- Active section highlighting
+- Smooth scroll to sections
+- Compact design for mobile
+
+### Expandable Cards
+- Company and role cards expand on click
+- Smooth height transitions
+- Technology tags and achievements
+- Timeline visualization
+- Hover effects and visual feedback
 
 ## 🎯 Professional Summary
 
-**Amin Chouaibi El Azaar** is a Backend & Platform Engineer with 6+ years of experience building scalable systems and distributed platforms. Currently working at Gartner Digital Markets, specializing in:
+**Amin Chouaibi El Azaar** is a Senior Backend Engineer with 6+ years of experience building scalable systems and distributed platforms. Currently working at Gartner Digital Markets, specializing in:
 
 - **.NET & C#** development
-- **Event-driven architectures**
+- **Event-driven architectures** with Kafka
 - **Cloud platforms** (AWS & Azure)
-- **Data pipelines** and processing
+- **Data pipelines** and real-time processing
 - **Microservices** architecture
-- **DevOps** practices and automation
+- **DevOps** practices and CI/CD
 
 ## 📈 Experience Highlights
 
-- **Gartner Digital Markets** (2022-Present): Reviews Platform team handling millions of software reviews
-- **Plain Concepts** (2019-2022): Lidl Plus App backend serving 60M+ users
+- **Gartner Digital Markets** (2022-Present): Reviews Platform team processing 1M+ reviews monthly
+- **Plain Concepts** (2019-2022): Lidl Plus App backend serving 60M+ users across Europe
 - **Pasiona Consulting** (2018-2019): Full-stack development with React and .NET
 
-## 🛡️ License
+## 🤝 Contributing
+
+Feel free to fork this project and adapt it for your own portfolio!
+
+## 📄 License
+
+This project is open source and available under the MIT License.
+
+## � Contact
+
+- **Email**: amin@example.com
+- **LinkedIn**: [Amin Chouaibi El Azaar](https://linkedin.com/in/yourprofile)
+- **GitHub**: [@aminch18](https://github.com/aminch18)
+- **Location**: Madrid, Spain
+
+---
+
+**Live Site**: [https://aminch18.github.io/portfolio/](https://aminch18.github.io/portfolio/)
 
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
 
