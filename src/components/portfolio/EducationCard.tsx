@@ -8,6 +8,7 @@ interface EducationCardProps {
   logo: string;
   isVisible: boolean;
   index: number;
+  status?: string;
 }
 
 export function EducationCard({ 
@@ -17,7 +18,8 @@ export function EducationCard({
   description, 
   logo, 
   isVisible, 
-  index 
+  index,
+  status
 }: EducationCardProps) {
   return (
     <div
@@ -30,12 +32,17 @@ export function EducationCard({
     >
       <div className="flex items-center gap-4 mb-4">
         <div className="text-4xl">{logo}</div>
-        <div>
+        <div className="flex-1">
           <h3 className="text-xl font-bold text-[var(--text-primary)]">
             {degree}
           </h3>
           <h4 className="text-lg text-[var(--accent-primary)]">{institution}</h4>
           <p className="text-[var(--text-secondary)]">{period}</p>
+          {status && (
+            <span className="inline-block mt-2 px-3 py-1 text-xs font-semibold rounded-full bg-[var(--accent-primary)]/10 text-[var(--accent-primary)]">
+              {status}
+            </span>
+          )}
         </div>
       </div>
       <p className="text-[var(--text-secondary)] leading-relaxed">

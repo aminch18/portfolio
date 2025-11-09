@@ -136,22 +136,74 @@ export type Education = {
   period: string;
   description: string;
   logo: string;
+  status?: string;
 };
 
 export const education: Education[] = [
   {
-    degree: "Computer Engineering",
-    institution: "Polytechnic University of Madrid",
-    period: "2015 — 2019",
-    description: "Specialized in Software Engineering and Distributed Systems",
-    logo: "🎓"
+    degree: "Engineer's degree, Computer Engineering",
+    institution: "Universitat Oberta de Catalunya",
+    period: "Sep 2021 — Present",
+    description: "Currently pursuing my passion for Computer Engineering at my own pace, balancing work and studies. Focusing on software architecture, distributed systems, and applying real-world experience to academic learning.",
+    logo: "🎓",
+    status: "In progress"
   },
   {
-    degree: "AWS Certified Solutions Architect",
-    institution: "Amazon Web Services",
-    period: "2023",
-    description: "Professional certification for cloud architecture and best practices",
-    logo: "☁️"
+    degree: "Senior Technician in Crossplatform Application Development",
+    institution: "Escola Pia Mataró - Formació Professional",
+    period: "2017 — 2019",
+    description: "Technical certification in Crossplatform Applications Development (Higher Education). Completed while working full-time, gaining hands-on experience with Android Studio, SQL Server, Java, HTML, and PHP. This professional qualification launched my career in software development.",
+    logo: "💻"
+  },
+  {
+    degree: "Engineer's degree, Telecommunications Engineering",
+    institution: "Universitat de Barcelona",
+    period: "Sep 2015 — 2017",
+    description: "Started my university journey here, completing 60 ECTS in basic subjects. Due to economic circumstances, I paused my studies to focus on work, which led me to discover my true passion for software development.",
+    logo: "📡",
+    status: "Paused"
+  }
+];
+
+export const educationJourneyNote = "My path reflects balancing education with life's realities. Economic circumstances led me to pause my first degree, but guided me to software development—my true calling. I earned my technical certification as a Senior Technician in Crossplatform Development while working full-time, and now I'm completing my Computer Engineering degree at my own pace, applying professional experience to academic learning.";
+
+export type Certificate = {
+  name: string;
+  issuer: string;
+  date: string;
+  credentialId?: string;
+  status?: string;
+};
+
+export const certificates: Certificate[] = [
+  {
+    name: "EF SET English Certificate 71/100 (C2 Proficient)",
+    issuer: "EF SET",
+    date: "Apr 2025"
+  },
+  {
+    name: "Security Yellow Belt",
+    issuer: "Security Journey",
+    date: "Dec 2024"
+  },
+  {
+    name: "Hacking For Begginers",
+    issuer: "Hackers Academy",
+    date: "Nov 2021",
+    credentialId: "UC-4b701f3a-6b32-4e40-9862-ba0cb7f2e967"
+  },
+  {
+    name: "Aplicaciones web en tiempo real con SignalR Core",
+    issuer: "Udemy",
+    date: "May 2020",
+    credentialId: "UC-61f8f77e-e552-426d-a305-1090648f4bdb"
+  },
+  {
+    name: ".NET Application Security and Secure Coding Training",
+    issuer: "Checkmarx",
+    date: "Apr 2022",
+    credentialId: "e8eac005f6d62591bce38902afaa6e26a58eae38",
+    status: "Expired Apr 2023"
   }
 ];
 
