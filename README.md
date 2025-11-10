@@ -1,26 +1,59 @@
-# Amin Chouaibi El Azaar - Portfolio
+# Amin Chouaibi El Azaar - Senior Backend Engineer Portfolio
 
-A modern, interactive portfolio website built with Next.js showcasing backend engineering expertise and professional experience.
+> Modern, multilingual portfolio showcasing 6+ years of backend engineering expertise in distributed systems, microservices, and cloud platforms.
 
-## 🚀 Features
+**Live Site**: [https://aminch18.github.io/portfolio](https://aminch18.github.io/portfolio)
 
-- **Animated Particle Background**: Interactive particle network with connecting lines across the entire page
-- **Dual Theme Support**: Light theme with olive green accents and dark mode
-- **Interactive Timeline**: Professional journey with expandable company and role cards
-- **Projects Showcase**: Featured projects with expandable details, status badges, and technology stacks
-- **Smooth Animations**: Scroll-based animations and smooth transitions throughout
-- **Responsive Design**: Optimized for all screen sizes with adaptive navigation
-- **TypeScript**: Full type safety throughout the application
-- **Modern UI**: Clean, professional design with glassmorphism effects
+## 👨‍💻 About
+
+Senior Software Engineer at **Gartner Digital Markets** specializing in:
+- **.NET/C#** backend development
+- **AWS & Azure** cloud architectures
+- **Apache Kafka** event-driven systems
+- **Microservices** and distributed systems
+- **CQRS, DDD**, and clean architecture patterns
+
+📍 **Location**: Barcelona, Spain  
+💼 **Experience**: 6+ years in software engineering  
+🎓 **Education**: Computer Engineering (UOC), Crossplatform Development (Escola Pia)
+
+## 🌟 Key Features
+
+- **🌍 Multilingual Support**: Full i18n implementation with English, Spanish, and Catalan
+- **🎨 Dual Theme**: Professional light/dark mode with smooth transitions
+- **📱 Responsive Design**: Optimized for mobile, tablet, and desktop
+- **🚀 Performance**: Static site generation with Next.js for optimal SEO
+- **♿ Accessible**: WCAG compliant with semantic HTML and ARIA labels
+- **🎯 SEO Optimized**: Complete metadata, structured data, and sitemap
+- **🔒 Type Safe**: 100% TypeScript for reliability
+- **🎨 Modern UI**: Glassmorphism effects and smooth animations
 
 ## 🛠️ Tech Stack
 
-- **Framework**: Next.js 14 with App Router
-- **Language**: TypeScript
-- **Styling**: TailwindCSS with custom CSS variables for theming
-- **Icons**: Lucide React
-- **Animations**: Canvas-based particle system with custom CSS animations
-- **Deployment**: GitHub Pages with GitHub Actions
+### Frontend Framework
+- **Next.js 14** - React framework with App Router
+- **TypeScript** - Type-safe development
+- **TailwindCSS** - Utility-first styling
+
+### Features & Libraries
+- **next-intl** - Internationalization (i18n)
+- **Lucide React** - Modern icon system
+- **Canvas API** - Interactive particle animations
+
+### Deployment & CI/CD
+- **GitHub Pages** - Static hosting
+- **GitHub Actions** - Automated deployment pipeline
+
+## 📊 SEO Optimization
+
+- ✅ Comprehensive meta tags (Open Graph, Twitter Cards)
+- ✅ Structured data (JSON-LD) for rich snippets
+- ✅ XML sitemap for search engines
+- ✅ robots.txt for crawler guidance
+- ✅ Semantic HTML5 markup
+- ✅ Alt tags for all images
+- ✅ Fast loading times (<3s)
+- ✅ Mobile-first responsive design
 
 ## 📁 Project Structure
 
