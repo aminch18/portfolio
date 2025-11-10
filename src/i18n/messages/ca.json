@@ -1,0 +1,77 @@
+{
+  "common": {
+    "location": "Barcelona, Espanya",
+    "portfolio": "Portafoli"
+  },
+  "nav": {
+    "journey": "Trajectòria",
+    "skills": "Habilitats",
+    "projects": "Projectes",
+    "education": "Educació"
+  },
+  "hero": {
+    "greeting": "Hola, sóc",
+    "requestCV": "Sol·licitar CV",
+    "letsTalk": "Parlem",
+    "linkedin": "LinkedIn",
+    "github": "GitHub",
+    "email": "Email"
+  },
+  "journey": {
+    "title": "Trajectòria Professional",
+    "description": "Des de construir sistemes escalables fins a liderar equips d'enginyeria",
+    "present": "Present"
+  },
+  "skills": {
+    "title": "Habilitats Tècniques",
+    "description": "Tecnologies i eines amb les quals treballo diàriament"
+  },
+  "projects": {
+    "title": "Projectes Destacats",
+    "description": "Construint solucions que escalen i generen impacte",
+    "status": {
+      "completed": "Completat",
+      "inProgress": "En Progrés",
+      "planned": "Planificat"
+    },
+    "technologies": "Tecnologies",
+    "highlights": "Aspectes Clau",
+    "inProgressMessage": "Aquest projecte està sent desenvolupat actualment"
+  },
+  "education": {
+    "title": "Educació",
+    "description": "Base acadèmica i aprenentatge continu",
+    "certificates": "Llicències i Certificacions"
+  },
+  "languages": {
+    "title": "Idiomes",
+    "description": "Comunicació multilingüe",
+    "native": "Natiu",
+    "fluent": "Fluid",
+    "advanced": "Avançat",
+    "intermediate": "Intermedi"
+  },
+  "footer": {
+    "title": "Construïm Alguna Cosa Gran Junts",
+    "description": "Sempre estic obert a discutir nous projectes, idees creatives o oportunitats per formar part de la teva visió.",
+    "getInTouch": "Contactar"
+  },
+  "contact": {
+    "title": "Contacta'm",
+    "name": "Nom",
+    "namePlaceholder": "El teu nom",
+    "email": "Email",
+    "emailPlaceholder": "el.teu.email@exemple.com",
+    "subject": "Assumpte",
+    "subjectPlaceholder": "De què t'agradaria parlar?",
+    "message": "Missatge",
+    "messagePlaceholder": "Explica'm sobre el teu projecte o consulta...",
+    "send": "Enviar Missatge",
+    "sending": "Enviant...",
+    "successTitle": "Missatge Enviat!",
+    "successMessage": "Gràcies per contactar-me. Et respondré tan aviat com sigui possible.",
+    "errorTitle": "Ups! Alguna cosa ha anat malament",
+    "errorMessage": "Si us plau, torna-ho a intentar o contacta'm directament a",
+    "close": "Tancar"
+  }
+}

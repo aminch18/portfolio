@@ -40,7 +40,7 @@ export default function ThemeSwitcher({ menuPosition }: ThemeSwitcherProps) {
   return (
     <button
       onClick={toggleTheme}
-      className={`fixed right-4 z-50 w-12 h-12 rounded-full shadow-lg font-semibold transition-all duration-500 hover:scale-105 flex items-center justify-center text-xl
+      className={`fixed right-4 z-[100] w-12 h-12 rounded-full shadow-lg font-semibold transition-all duration-500 hover:scale-105 flex items-center justify-center text-xl
         ${menuPosition === "top" ? "top-[1.125rem] sm:top-[1.625rem]" : "bottom-[1.125rem] sm:bottom-[1.625rem]"}
       `}
       style={{

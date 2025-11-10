@@ -1,4 +1,6 @@
+"use client";
 import React from "react";
+import { useI18n } from "../../i18n/provider";
 
 interface FloatingNavigationProps {
   menuPosition: "top" | "bottom";
@@ -6,11 +8,13 @@ interface FloatingNavigationProps {
 }
 
 export function FloatingNavigation({ menuPosition, activeSection }: FloatingNavigationProps) {
+  const { t } = useI18n();
+  
   const navItems = [
-    { id: "home", label: "Home" },
-    { id: "journey", label: "Journey" },
-    { id: "education", label: "Education" },
-    { id: "projects", label: "Projects" },
+    { id: "home", label: t('common.portfolio') },
+    { id: "journey", label: t('nav.journey') },
+    { id: "education", label: t('nav.education') },
+    { id: "projects", label: t('nav.projects') },
   ];
 
   return (

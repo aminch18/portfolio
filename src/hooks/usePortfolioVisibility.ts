@@ -9,6 +9,11 @@ export function usePortfolioVisibility() {
 
   useEffect(() => {
     // Intersection Observer for scroll animations
+    // Use more aggressive settings on mobile for better visibility detection
+    const isMobile = typeof window !== 'undefined' && window.innerWidth < 768;
+    const threshold = isMobile ? 0.1 : 0.2;
+    const rootMargin = isMobile ? "0px 0px -50px 0px" : "0px 0px -100px 0px";
+    
     observerRef.current = new IntersectionObserver(
       (entries) => {
         entries.forEach((entry) => {
@@ -50,7 +55,7 @@ export function usePortfolioVisibility() {
           }
         });
       },
-      { threshold: 0.2, rootMargin: "0px 0px -100px 0px" }
+      { threshold, rootMargin }
     );
 
     // Observe all sections after component mounts

@@ -1,14 +1,21 @@
+"use client";
 import React from "react";
 import { SectionHeader } from "../ui/SectionHeader";
 import { EducationCard } from "./EducationCard";
-import { education, certificates, educationJourneyNote } from "../../data/profileData";
 import { Award } from "lucide-react";
+import { useI18n } from "../../i18n/provider";
+import { getEducationJourneyNote, getEducation, getCertificates } from "../../data/profileDataTranslations";
 
 interface EducationSectionProps {
   isVisible: (id: string) => boolean;
 }
 
 export function EducationSection({ isVisible }: EducationSectionProps) {
+  const { t, locale } = useI18n();
+  const journeyNote = getEducationJourneyNote(locale);
+  const education = getEducation(locale);
+  const certificates = getCertificates(locale);
+  
   return (
     <section
       id="education"
@@ -17,8 +24,8 @@ export function EducationSection({ isVisible }: EducationSectionProps) {
     >
       <div className="max-w-6xl mx-auto">
         <SectionHeader
-          title="Education"
-          description="Academic foundation and continuous learning"
+          title={t('education.title')}
+          description={t('education.description')}
           isVisible={isVisible("education")}
         />
 
@@ -29,10 +36,9 @@ export function EducationSection({ isVisible }: EducationSectionProps) {
             : "translate-y-10 opacity-0"
         }`} style={{ zIndex: 20 }}>
           <div className="relative max-w-4xl mx-auto">
-            <div className="absolute -left-4 top-0 text-4xl opacity-20">💭</div>
             <div className="bg-gradient-to-r from-[var(--accent-primary)]/10 to-transparent rounded-lg px-8 py-4 border-l-2 border-[var(--accent-primary)]">
               <p className="text-sm text-[var(--text-secondary)] leading-relaxed italic">
-                {educationJourneyNote}
+                {journeyNote}
               </p>
             </div>
           </div>
@@ -59,7 +65,7 @@ export function EducationSection({ isVisible }: EducationSectionProps) {
           <div className="flex items-center gap-3 mb-8">
             <Award className="w-8 h-8 text-[var(--accent-primary)]" />
             <h3 className="text-3xl font-bold text-[var(--text-primary)]">
-              Licenses & Certifications
+              {t('education.certificates')}
             </h3>
           </div>
 
@@ -75,7 +81,17 @@ export function EducationSection({ isVisible }: EducationSectionProps) {
                 style={{ animationDelay: `${(education.length + index) * 100}ms`, zIndex: 20 }}
               >
                 <div className="flex items-start gap-3 mb-3">
-                  <Award className="w-6 h-6 text-[var(--accent-primary)] flex-shrink-0 mt-1" />
+                  {cert.logo ? (
+                    <div className="w-12 h-12 flex-shrink-0 rounded overflow-hidden bg-white">
+                      <img 
+                        src={cert.logo} 
+                        alt={`${cert.issuer} logo`}
+                        className="w-full h-full object-contain"
+                      />
+                    </div>
+                  ) : (
+                    <Award className="w-12 h-12 p-2 text-[var(--accent-primary)] flex-shrink-0 bg-[var(--accent-primary)]/10 rounded" />
+                  )}
                   <div className="flex-1">
                     <h4 className="font-bold text-[var(--text-primary)] leading-tight mb-2">
                       {cert.name}

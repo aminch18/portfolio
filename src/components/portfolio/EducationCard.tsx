@@ -31,7 +31,17 @@ export function EducationCard({
       style={{ animationDelay: `${index * 200}ms`, zIndex: 20 }}
     >
       <div className="flex items-center gap-4 mb-4">
-        <div className="text-4xl">{logo}</div>
+        {logo.startsWith('http') ? (
+          <div className="w-16 h-16 flex-shrink-0 rounded overflow-hidden bg-white p-2">
+            <img 
+              src={logo} 
+              alt={`${institution} logo`}
+              className="w-full h-full object-contain"
+            />
+          </div>
+        ) : (
+          <div className="text-4xl">{logo}</div>
+        )}
         <div className="flex-1">
           <h3 className="text-xl font-bold text-[var(--text-primary)]">
             {degree}

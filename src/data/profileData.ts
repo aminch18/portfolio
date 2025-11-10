@@ -145,7 +145,7 @@ export const education: Education[] = [
     institution: "Universitat Oberta de Catalunya",
     period: "Sep 2021 — Present",
     description: "Currently pursuing my passion for Computer Engineering at my own pace, balancing work and studies. Focusing on software architecture, distributed systems, and applying real-world experience to academic learning.",
-    logo: "🎓",
+    logo: "https://media.licdn.com/dms/image/v2/D4D0BAQEyUV6w_gu7xw/company-logo_100_100/company-logo_100_100/0/1694764811277/uoc_logo?e=1764201600&v=beta&t=J1V-d5x6tZOvOFQwwovjuAbFKwHWcr_ty-JoiN0_v_o",
     status: "In progress"
   },
   {
@@ -153,14 +153,14 @@ export const education: Education[] = [
     institution: "Escola Pia Mataró - Formació Professional",
     period: "2017 — 2019",
     description: "Technical certification in Crossplatform Applications Development (Higher Education). Completed while working full-time, gaining hands-on experience with Android Studio, SQL Server, Java, HTML, and PHP. This professional qualification launched my career in software development.",
-    logo: "💻"
+    logo: "https://media.licdn.com/dms/image/v2/C4E0BAQHwVGV9Gb8l8g/company-logo_100_100/company-logo_100_100/0/1630650212178/fp_escola_pia_matar_logo?e=1764201600&v=beta&t=YOHNgZ5w_g5odZ9-Xex4uyhQtKdilOEXQZFHXU2bFqs"
   },
   {
     degree: "Engineer's degree, Telecommunications Engineering",
     institution: "Universitat de Barcelona",
     period: "Sep 2015 — 2017",
     description: "Started my university journey here, completing 60 ECTS in basic subjects. Due to economic circumstances, I paused my studies to focus on work, which led me to discover my true passion for software development.",
-    logo: "📡",
+    logo: "https://media.licdn.com/dms/image/v2/D4D0BAQFn6nu8RTCvCA/company-logo_100_100/B4DZkOEwyRIcAc-/0/1756877757686/university_of_barcelona_logo?e=1764201600&v=beta&t=zOBmVmK9agD6NOBwzBIAG2X82bYgfQGX2vaVQKAEAXM",
     status: "Paused"
   }
 ];
@@ -173,37 +173,42 @@ export type Certificate = {
   date: string;
   credentialId?: string;
   status?: string;
+  logo?: string; // Company logo URL or emoji
 };
 
 export const certificates: Certificate[] = [
   {
     name: "EF SET English Certificate 71/100 (C2 Proficient)",
     issuer: "EF SET",
-    date: "Apr 2025"
+    date: "Apr 2025",
+    logo: "https://media.licdn.com/dms/image/v2/D4E0BAQEw-1S8jictTA/company-logo_100_100/B4EZdFpZBcH0AQ-/0/1749220168176/efset_logo?e=1764201600&v=beta&t=aRz6u0ZU7UnuKVwg3BQXYEiJDUHptUwfBfZtyUbDdwo"
   },
   {
     name: "Security Yellow Belt",
     issuer: "Security Journey",
-    date: "Dec 2024"
+    date: "Dec 2024",
+    logo: "https://media.licdn.com/dms/image/v2/D4E0BAQHp0hC9d52dOg/company-logo_100_100/company-logo_100_100/0/1719939549314/security_journey_logo?e=1764201600&v=beta&t=N4nxTXjqIFfVgDV3Ol4K-FhKTFgXEcmIei6WAcISs4c"
   },
   {
     name: "Hacking For Begginers",
     issuer: "Hackers Academy",
     date: "Nov 2021",
-    credentialId: "UC-4b701f3a-6b32-4e40-9862-ba0cb7f2e967"
+    credentialId: "UC-4b701f3a-6b32-4e40-9862-ba0cb7f2e967",
+    logo: "https://media.licdn.com/dms/image/v2/C510BAQGG2hKMXbwxQw/company-logo_100_100/company-logo_100_100/0/1630588528738/hackersacademy_logo?e=1764201600&v=beta&t=qbTPxiI1FRzK7aU6M-pwYJr12E2jWX0D-wRLKmRh5rk"
   },
   {
     name: "Aplicaciones web en tiempo real con SignalR Core",
     issuer: "Udemy",
     date: "May 2020",
-    credentialId: "UC-61f8f77e-e552-426d-a305-1090648f4bdb"
+    credentialId: "UC-61f8f77e-e552-426d-a305-1090648f4bdb",
+    logo: "https://media.licdn.com/dms/image/v2/D560BAQEf_NHzN2yVQg/company-logo_100_100/company-logo_100_100/0/1723593046388/udemy_logo?e=1764201600&v=beta&t=4eZZqcP5gzMOqyUNQAubg2eIm2OrVBCbGsrP69_0eX4"
   },
   {
     name: ".NET Application Security and Secure Coding Training",
     issuer: "Checkmarx",
     date: "Apr 2022",
     credentialId: "e8eac005f6d62591bce38902afaa6e26a58eae38",
-    status: "Expired Apr 2023"
+    logo: "https://media.licdn.com/dms/image/v2/D4E0BAQH2KfSPEaLuEQ/company-logo_100_100/B4EZpPiWCRHEAQ-/0/1762270995084/checkmarx_logo?e=1764201600&v=beta&t=p3OkUXzZ9i6-Q1yTLf_ylQrpdNCvB-i2jyt2-d_WEPA"
   }
 ];
 
@@ -286,6 +291,12 @@ export type Project = {
   status: "completed" | "in-progress" | "planned";
 };
 
+// ========================================
+// PROJECTS - Currently showing placeholder "Coming Soon" projects
+// ========================================
+// To restore real projects, uncomment the section below and comment out the placeholder projects
+
+/* REAL PROJECTS - BACKUP (Uncomment to restore)
 export const projects: Project[] = [
   {
     title: "Distributed Review Processing System",
@@ -339,6 +350,50 @@ export const projects: Project[] = [
     ],
     status: "in-progress",
     github: "https://github.com"
+  }
+];
+*/
+
+// PLACEHOLDER PROJECTS - Currently Active
+export const projects: Project[] = [
+  {
+    title: "Project Coming Soon",
+    description: "Exciting new project currently in development",
+    longDescription: "This project is currently being developed and will be revealed soon. Stay tuned for updates on this innovative solution.",
+    technologies: ["C#", ".NET", "AWS", "Kafka", "PostgreSQL"],
+    highlights: [
+      "Details will be available soon",
+      "Innovative architecture and design",
+      "Scalable and production-ready",
+      "Following best practices and patterns"
+    ],
+    status: "in-progress"
+  },
+  {
+    title: "Project Coming Soon",
+    description: "Another exciting project in the works",
+    longDescription: "This project is currently under development. More information will be shared once it reaches a presentable stage.",
+    technologies: ["TypeScript", "Next.js", "AWS", "PostgreSQL"],
+    highlights: [
+      "Details will be available soon",
+      "Modern tech stack",
+      "High performance and reliability",
+      "Production-grade implementation"
+    ],
+    status: "in-progress"
+  },
+  {
+    title: "Project Coming Soon",
+    description: "New initiative currently being built",
+    longDescription: "This project is actively being worked on. Updates and details will be shared as development progresses.",
+    technologies: ["Go", "Kubernetes", "AWS", "Redis"],
+    highlights: [
+      "Details will be available soon",
+      "Cloud-native architecture",
+      "Enterprise-grade solution",
+      "Optimized for scale"
+    ],
+    status: "in-progress"
   }
 ];
 

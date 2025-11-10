@@ -1,7 +1,9 @@
+"use client";
 import React from "react";
 import { SectionHeader } from "../ui/SectionHeader";
 import { CompanyCard } from "./CompanyCard";
-import { engineeringJourney } from "../../data/profileData";
+import { useI18n } from "../../i18n/provider";
+import { getEngineeringJourney } from "../../data/profileDataTranslations";
 
 interface JourneySectionProps {
   isVisible: (id: string) => boolean;
@@ -14,6 +16,9 @@ export function JourneySection({
   expandedCompanies, 
   toggleCompany 
 }: JourneySectionProps) {
+  const { t, locale } = useI18n();
+  const engineeringJourney = getEngineeringJourney(locale);
+  
   return (
     <section
       id="journey"
@@ -22,8 +27,8 @@ export function JourneySection({
     >
       <div className="max-w-6xl mx-auto">
         <SectionHeader
-          title="Engineering Journey"
-          description="From scaling enterprise platforms to architecting systems that serve millions"
+          title={t('journey.title')}
+          description={t('journey.description')}
           isVisible={isVisible("journey")}
         />
 

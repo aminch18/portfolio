@@ -2,9 +2,11 @@
 import React, { useState } from "react";
 import { Mail, ExternalLink } from "lucide-react";
 import { ContactForm } from "./ContactForm";
+import { useI18n } from "../../i18n/provider";
 
 export function FooterCTA() {
   const [isContactFormOpen, setIsContactFormOpen] = useState(false);
+  const { t } = useI18n();
 
   return (
     <>
@@ -15,11 +17,10 @@ export function FooterCTA() {
             className="text-4xl md:text-5xl font-bold mb-6" 
             style={{ color: 'var(--accent-primary)' }}
           >
-            Let's Build Something Amazing
+            {t('footer.title')}
           </h2>
           <p className="text-xl text-[var(--text-secondary)] mb-8 max-w-2xl mx-auto">
-            Ready to architect scalable solutions and drive technical
-            excellence together?
+            {t('footer.description')}
           </p>
 
           <button
@@ -31,7 +32,7 @@ export function FooterCTA() {
             }}
           >
             <Mail className="w-5 h-5" style={{ color: '#ffffff' }} />
-            <span style={{ color: '#ffffff' }}>Get In Touch</span>
+            <span style={{ color: '#ffffff' }}>{t('footer.getInTouch')}</span>
           </button>
         </div>
       </div>

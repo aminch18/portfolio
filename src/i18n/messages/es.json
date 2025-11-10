@@ -1,0 +1,77 @@
+{
+  "common": {
+    "location": "Barcelona, España",
+    "portfolio": "Portafolio"
+  },
+  "nav": {
+    "journey": "Trayectoria",
+    "skills": "Habilidades",
+    "projects": "Proyectos",
+    "education": "Educación"
+  },
+  "hero": {
+    "greeting": "Hola, soy",
+    "requestCV": "Solicitar CV",
+    "letsTalk": "Hablemos",
+    "linkedin": "LinkedIn",
+    "github": "GitHub",
+    "email": "Email"
+  },
+  "journey": {
+    "title": "Trayectoria Profesional",
+    "description": "Desde construir sistemas escalables hasta liderar equipos de ingeniería",
+    "present": "Presente"
+  },
+  "skills": {
+    "title": "Habilidades Técnicas",
+    "description": "Tecnologías y herramientas con las que trabajo diariamente"
+  },
+  "projects": {
+    "title": "Proyectos Destacados",
+    "description": "Construyendo soluciones que escalan y generan impacto",
+    "status": {
+      "completed": "Completado",
+      "inProgress": "En Progreso",
+      "planned": "Planificado"
+    },
+    "technologies": "Tecnologías",
+    "highlights": "Aspectos Clave",
+    "inProgressMessage": "Este proyecto está siendo desarrollado actualmente"
+  },
+  "education": {
+    "title": "Educación",
+    "description": "Base académica y aprendizaje continuo",
+    "certificates": "Licencias y Certificaciones"
+  },
+  "languages": {
+    "title": "Idiomas",
+    "description": "Comunicación multilingüe",
+    "native": "Nativo",
+    "fluent": "Fluido",
+    "advanced": "Avanzado",
+    "intermediate": "Intermedio"
+  },
+  "footer": {
+    "title": "Construyamos Algo Grandioso Juntos",
+    "description": "Siempre estoy abierto a discutir nuevos proyectos, ideas creativas u oportunidades para formar parte de tu visión.",
+    "getInTouch": "Contactar"
+  },
+  "contact": {
+    "title": "Ponte en Contacto",
+    "name": "Nombre",
+    "namePlaceholder": "Tu nombre",
+    "email": "Email",
+    "emailPlaceholder": "tu.email@ejemplo.com",
+    "subject": "Asunto",
+    "subjectPlaceholder": "¿De qué te gustaría hablar?",
+    "message": "Mensaje",
+    "messagePlaceholder": "Cuéntame sobre tu proyecto o consulta...",
+    "send": "Enviar Mensaje",
+    "sending": "Enviando...",
+    "successTitle": "¡Mensaje Enviado!",
+    "successMessage": "Gracias por contactarme. Te responderé lo antes posible.",
+    "errorTitle": "¡Ups! Algo salió mal",
+    "errorMessage": "Por favor, inténtalo de nuevo o contáctame directamente en",
+    "close": "Cerrar"
+  }
+}

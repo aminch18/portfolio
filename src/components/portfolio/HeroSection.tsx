@@ -3,6 +3,8 @@ import React, { useState } from "react";
 import { Mail, MapPin, Download, Phone, Linkedin, Github } from "lucide-react";
 import { profile } from "../../data/profileData";
 import { ContactForm } from "./ContactForm";
+import { useI18n } from "../../i18n/provider";
+import { getProfileData } from "../../data/profileDataTranslations";
 
 interface HeroSectionProps {
   isLoaded: boolean;
@@ -10,6 +12,8 @@ interface HeroSectionProps {
 
 export function HeroSection({ isLoaded }: HeroSectionProps) {
   const [isContactFormOpen, setIsContactFormOpen] = useState(false);
+  const { locale, t } = useI18n();
+  const profileData = getProfileData(locale);
 
   return (
     <>
@@ -58,13 +62,13 @@ export function HeroSection({ isLoaded }: HeroSectionProps) {
             </span>
           </h1>
           <h2 className="text-2xl md:text-3xl text-[var(--text-secondary)] mb-6">
-            {profile.title}
+            {profileData.title}
           </h2>
 
           <div className="flex flex-wrap items-center justify-center gap-4 sm:gap-6 mb-8 text-[var(--text-secondary)]">
             <div className="flex items-center gap-2 text-[var(--text-secondary)]">
               <MapPin className="w-5 h-5" />
-              <span>{profile.location}</span>
+              <span>{profileData.location}</span>
             </div>
             <div className="flex items-center gap-2 text-[var(--text-secondary)]">
               <Mail className="w-5 h-5" />
@@ -73,11 +77,7 @@ export function HeroSection({ isLoaded }: HeroSectionProps) {
           </div>
 
           <p className="text-lg md:text-xl text-[var(--text-secondary)] max-w-3xl mx-auto leading-relaxed mb-8">
-            Passionate about building scalable backend systems and leading
-            technical initiatives that serve
-            <span className="text-[var(--accent-primary)] font-semibold"> millions of users </span>
-            across enterprise platforms. Expertise in event-driven architectures and
-            <span className="text-[var(--accent-primary)] font-semibold"> high-performance systems</span>.
+            {profileData.summary}
           </p>
 
           <div className="flex flex-col sm:flex-row gap-4 justify-center mb-8">
@@ -90,7 +90,7 @@ export function HeroSection({ isLoaded }: HeroSectionProps) {
               }}
             >
               <Download className="w-5 h-5" style={{ color: '#ffffff' }} />
-              <span style={{ color: '#ffffff' }}>Request CV</span>
+              <span style={{ color: '#ffffff' }}>{t('hero.requestCV')}</span>
             </button>
             <a
               href={`tel:${profile.phone}`}
@@ -102,7 +102,7 @@ export function HeroSection({ isLoaded }: HeroSectionProps) {
               }}
             >
               <Phone className="w-5 h-5" style={{ color: 'var(--accent-primary)' }} />
-              <span style={{ color: 'var(--text-primary)' }}>Let's Talk</span>
+              <span style={{ color: 'var(--text-primary)' }}>{t('hero.letsTalk')}</span>
             </a>
           </div>
 

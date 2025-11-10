@@ -1,6 +1,7 @@
 "use client";
 import React, { useState } from "react";
 import { X, Send, CheckCircle, AlertCircle } from "lucide-react";
+import { useI18n } from "../../i18n/provider";
 
 interface ContactFormProps {
   isOpen: boolean;
@@ -8,6 +9,7 @@ interface ContactFormProps {
 }
 
 export function ContactForm({ isOpen, onClose }: ContactFormProps) {
+  const { t } = useI18n();
   const [formData, setFormData] = useState({
     name: "",
     email: "",
@@ -80,10 +82,10 @@ export function ContactForm({ isOpen, onClose }: ContactFormProps) {
         {/* Header */}
         <div className="mb-8">
           <h2 className="text-3xl md:text-4xl font-bold mb-3" style={{ color: "var(--accent-primary)" }}>
-            Get In Touch
+            {t('contact.title')}
           </h2>
           <p className="text-lg" style={{ color: "var(--text-secondary)" }}>
-            Let's discuss how we can work together on your next project
+            {t('footer.description')}
           </p>
         </div>
 

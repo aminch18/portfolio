@@ -1,0 +1,77 @@
+{
+  "common": {
+    "location": "Barcelona, Spain",
+    "portfolio": "Home"
+  },
+  "nav": {
+    "journey": "Journey",
+    "skills": "Skills",
+    "projects": "Projects",
+    "education": "Education"
+  },
+  "hero": {
+    "greeting": "Hi, I'm",
+    "requestCV": "Request CV",
+    "letsTalk": "Let's Talk",
+    "linkedin": "LinkedIn",
+    "github": "GitHub",
+    "email": "Email"
+  },
+  "journey": {
+    "title": "Professional Journey",
+    "description": "From building scalable systems to leading engineering teams",
+    "present": "Present"
+  },
+  "skills": {
+    "title": "Technical Skills",
+    "description": "Technologies and tools I work with daily"
+  },
+  "projects": {
+    "title": "Featured Projects",
+    "description": "Building solutions that scale and make impact",
+    "status": {
+      "completed": "Completed",
+      "inProgress": "In Progress",
+      "planned": "Planned"
+    },
+    "technologies": "Technologies",
+    "highlights": "Key Highlights",
+    "inProgressMessage": "This project is currently being developed"
+  },
+  "education": {
+    "title": "Education",
+    "description": "Academic foundation and continuous learning",
+    "certificates": "Licenses & Certifications"
+  },
+  "languages": {
+    "title": "Languages",
+    "description": "Multilingual communication",
+    "native": "Native",
+    "fluent": "Fluent",
+    "advanced": "Advanced",
+    "intermediate": "Intermediate"
+  },
+  "footer": {
+    "title": "Let's Build Something Great Together",
+    "description": "I'm always open to discussing new projects, creative ideas, or opportunities to be part of your vision.",
+    "getInTouch": "Get In Touch"
+  },
+  "contact": {
+    "title": "Get In Touch",
+    "name": "Name",
+    "namePlaceholder": "Your name",
+    "email": "Email",
+    "emailPlaceholder": "your.email@example.com",
+    "subject": "Subject",
+    "subjectPlaceholder": "What would you like to discuss?",
+    "message": "Message",
+    "messagePlaceholder": "Tell me about your project or inquiry...",
+    "send": "Send Message",
+    "sending": "Sending...",
+    "successTitle": "Message Sent!",
+    "successMessage": "Thank you for reaching out. I'll get back to you as soon as possible.",
+    "errorTitle": "Oops! Something went wrong",
+    "errorMessage": "Please try again or contact me directly at",
+    "close": "Close"
+  }
+}

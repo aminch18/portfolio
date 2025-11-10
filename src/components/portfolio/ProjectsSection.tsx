@@ -1,13 +1,18 @@
+"use client";
 import React from "react";
 import { SectionHeader } from "../ui/SectionHeader";
 import { ProjectCard } from "./ProjectCard";
-import { projects } from "../../data/profileData";
+import { useI18n } from "../../i18n/provider";
+import { getProjects } from "../../data/profileDataTranslations";
 
 interface ProjectsSectionProps {
   isVisible: (id: string) => boolean;
 }
 
 export function ProjectsSection({ isVisible }: ProjectsSectionProps) {
+  const { t, locale } = useI18n();
+  const projects = getProjects(locale);
+  
   return (
     <section
       id="projects"
@@ -16,8 +21,8 @@ export function ProjectsSection({ isVisible }: ProjectsSectionProps) {
     >
       <div className="max-w-6xl mx-auto">
         <SectionHeader
-          title="Featured Projects"
-          description="Building scalable systems and innovative solutions"
+          title={t('projects.title')}
+          description={t('projects.description')}
           isVisible={isVisible("projects")}
         />
 
