@@ -12,18 +12,21 @@ interface ProjectCardProps {
 export function ProjectCard({ project, index, isVisible }: ProjectCardProps) {
   const [isExpanded, setIsExpanded] = useState(false);
   const { t } = useI18n();
-  const isBlocked = project.status === "in-progress";
+  // Only block projects with status "blocked" - "in-progress" projects are fully visible
+  const isBlocked = project.status === "blocked";
 
   const statusColors = {
     completed: "#10b981",
     "in-progress": "#f59e0b",
-    planned: "#6366f1"
+    planned: "#6366f1",
+    blocked: "#ef4444"
   };
 
   const statusLabels = {
     completed: t('projects.status.completed'),
     "in-progress": t('projects.status.inProgress'),
-    planned: t('projects.status.planned')
+    planned: t('projects.status.planned'),
+    blocked: t('projects.status.blocked')
   };
 
   return (
@@ -38,23 +41,8 @@ export function ProjectCard({ project, index, isVisible }: ProjectCardProps) {
       style={{ animationDelay: `${index * 200}ms`, zIndex: 20 }}
       onClick={() => !isExpanded && !isBlocked && setIsExpanded(true)}
     >
-      {/* Blocked Overlay for In Progress Projects */}
-      {isBlocked && (
-        <div className="absolute inset-0 bg-[var(--bg-primary)]/60 backdrop-blur-sm rounded-2xl flex items-center justify-center z-10">
-          <div className="text-center px-6">
-            <div className="text-4xl mb-3">🚧</div>
-            <h4 className="text-lg font-bold mb-2" style={{ color: 'var(--accent-primary)' }}>
-              {t('projects.status.inProgress')}
-            </h4>
-            <p className="text-sm" style={{ color: 'var(--text-secondary)' }}>
-              {t('projects.inProgressMessage')}
-            </p>
-          </div>
-        </div>
-      )}
-
-      {/* Header */}
-      <div className={`mb-4 ${isBlocked ? 'blur-sm' : ''}`}>
+      {/* Header - Always visible */}
+      <div className="mb-4">
         <div className="flex items-start justify-between gap-4 mb-3">
           <div className="flex-1">
             <h3 className="text-xl font-bold mb-2" style={{ color: 'var(--text-primary)' }}>
@@ -100,19 +88,36 @@ export function ProjectCard({ project, index, isVisible }: ProjectCardProps) {
           </div>
         </div>
         
-        <p className="text-[var(--text-secondary)] mb-4">
-          {isExpanded ? project.longDescription : project.description}
-        </p>
+        {!isBlocked && (
+          <p className="text-[var(--text-secondary)] mb-4">
+            {isExpanded ? project.longDescription : project.description}
+          </p>
+        )}
       </div>
 
+      {/* Blocked Overlay - Shows after title */}
+      {isBlocked && (
+        <div className="bg-[var(--bg-secondary)]/80 backdrop-blur-sm rounded-xl p-6 text-center mb-4">
+          <div className="text-4xl mb-3">🚧</div>
+          <h4 className="text-lg font-bold mb-2" style={{ color: 'var(--accent-primary)' }}>
+            {statusLabels[project.status]}
+          </h4>
+          <p className="text-sm" style={{ color: 'var(--text-secondary)' }}>
+            {t('projects.inProgressMessage')}
+          </p>
+        </div>
+      )}
+
       {/* Technologies */}
-      <div className={`flex flex-wrap gap-1 mb-4 ${isBlocked ? 'blur-sm' : ''}`}>
-        {project.technologies.map((tech) => (
-          <span key={tech} className="chip">
-            {tech}
-          </span>
-        ))}
-      </div>
+      {!isBlocked && (
+        <div className="flex flex-wrap gap-1 mb-4">
+          {project.technologies.map((tech) => (
+            <span key={tech} className="chip">
+              {tech}
+            </span>
+          ))}
+        </div>
+      )}
 
       {/* Highlights - Only show when expanded */}
       {isExpanded && !isBlocked && (

@@ -525,32 +525,134 @@ const projectsCA = projectsEN.map((project, idx) => {
 
 */
 
-// PLACEHOLDER PROJECTS TRANSLATIONS - Currently Active
-const projectsES = projectsEN.map((project) => ({
-  ...project,
-  title: "Proyecto Próximamente",
-  description: "Emocionante nuevo proyecto actualmente en desarrollo",
-  longDescription: "Este proyecto está siendo desarrollado actualmente y será revelado pronto. Mantente atento a las actualizaciones sobre esta solución innovadora.",
-  highlights: [
-    "Los detalles estarán disponibles pronto",
-    "Arquitectura y diseño innovadores",
-    "Escalable y listo para producción",
-    "Siguiendo las mejores prácticas y patrones"
-  ]
-}));
+// REAL PROJECTS TRANSLATIONS
+const projectsES = projectsEN.map((project, idx) => {
+  if (idx === 0) { // Reviews Processing System
+    return {
+      ...project,
+      title: "Sistema de Procesamiento de Reseñas",
+      description: "Sistema de alto rendimiento basado en eventos que procesa reseñas de software en Gartner Digital Markets",
+      longDescription: "Arquitecté e implementé un sistema escalable de microservicios que ingiere, valida y procesa reseñas de software de múltiples fuentes. Construido con arquitectura orientada a eventos usando Kafka para procesamiento confiable de datos, implementando pipelines sofisticados de validación y mecanismos de puntuación de calidad que potencian todos los marketplaces de Gartner Digital Markets (Capterra, GetApp, Software Advice).",
+      highlights: [
+        "Procesando 100K+ reseñas mensualmente con alta fiabilidad",
+        "Arquitectura orientada a eventos con Kafka para consistencia de datos",
+        "Migración de herramienta de moderación de Angular a Next.js, mejorando el rendimiento en un 40%",
+        "Implementación de AWS SNS/SQS para flujos de trabajo de procesamiento asíncrono de reseñas",
+        "Integración de OpenSearch para búsqueda avanzada, filtrado y analítica",
+        "Reducción de errores de procesamiento en un 85% mediante manejo robusto de errores"
+      ]
+    };
+  } else if (idx === 1) { // User Alerts System Migration
+    return {
+      ...project,
+      title: "Migración del Sistema de Alertas de Usuario",
+      description: "Migración a gran escala del sistema de alertas in-app de Lidl Plus desde monolito a microservicios cloud-native",
+      longDescription: "Lideré la migración end-to-end del sistema crítico de alertas de usuario desde monolito heredado a microservicios cloud-native en Azure. El sistema de alertas entrega mensajes promocionales, notificaciones de e-tickets y ofertas personalizadas directamente al inbox de la app Lidl Plus de los usuarios, sirviendo a 60M+ usuarios activos en múltiples países.",
+      highlights: [
+        "Migración de 50+ tipos de alertas (promociones, e-tickets, ofertas personalizadas) sin tiempo de inactividad",
+        "Orquestación de migración de 100M+ alertas desde SQL Server a Cosmos DB usando Azure Durable Functions",
+        "Procesando millones de notificaciones de usuario diarias para 60M+ usuarios de Lidl Plus",
+        "Reducción de costes de infraestructura en un 60% usando arquitectura serverless",
+        "Mejora de latencia de entrega de notificaciones de minutos a segundos",
+        "Implementación de arquitectura orientada a eventos para engagement de usuario en tiempo real"
+      ]
+    };
+  } else if (idx === 2) { // Rate Limiter Lab
+    return {
+      ...project,
+      title: "Rate Limiter Lab (en progreso)",
+      description: "Servicio distribuido de limitación de tasa construido en Go para aprendizaje y experimentación. Actualmente en progreso, pero todos los detalles técnicos y objetivos son visibles.",
+      longDescription: "Proyecto personal para explorar algoritmos y patrones de limitación de tasa distribuida. Implementando algoritmos de token bucket, sliding window y leaky bucket con Redis para gestión de estado distribuido. Enfocado en alto rendimiento, baja latencia y escalabilidad horizontal. El proyecto está siendo desarrollado activamente y todos los detalles técnicos, arquitectura y objetivos están documentados para transparencia.",
+      highlights: [
+        "Explorando diferentes algoritmos de limitación de tasa (token bucket, sliding window, leaky bucket)",
+        "Gestión de estado distribuido respaldada por Redis",
+        "Construyendo para alto rendimiento y baja latencia",
+        "Implementando observabilidad con Prometheus/Grafana",
+        "Aprendiendo patrones de concurrencia y mejores prácticas de Go",
+        "Documentando arquitectura y decisiones de diseño"
+      ]
+    };
+  } else if (idx === 3) { // AI-Powered Code Review Assistant
+    return {
+      ...project,
+      title: "Asistente de Revisión de Código con IA",
+      description: "Sistema inteligente de revisión de código usando LLMs para feedback automatizado",
+      longDescription: "Construyendo un asistente de IA que analiza pull requests, sugiere mejoras, detecta vulnerabilidades de seguridad y asegura estándares de calidad de código. Se integra con GitHub y proporciona feedback contextual basado en patrones específicos del repositorio.",
+      highlights: [
+        "Analizando pull requests con insights potenciados por IA",
+        "Detectando problemas de seguridad y code smells automáticamente",
+        "Proporcionando sugerencias contextuales basadas en patrones del código",
+        "Integrándose con GitHub para flujo de trabajo sin fricciones",
+        "Aprendiendo y mejorando del feedback de desarrolladores"
+      ]
+    };
+  }
+  return project;
+});
 
-const projectsCA = projectsEN.map((project) => ({
-  ...project,
-  title: "Projecte Properament",
-  description: "Emocionant nou projecte actualment en desenvolupament",
-  longDescription: "Aquest projecte està sent desenvolupat actualment i serà revelat aviat. Mantingues-te atent a les actualitzacions sobre aquesta solució innovadora.",
-  highlights: [
-    "Els detalls estaran disponibles aviat",
-    "Arquitectura i disseny innovadors",
-    "Escalable i llest per a producció",
-    "Seguint les millors pràctiques i patrons"
-  ]
-}));
+const projectsCA = projectsEN.map((project, idx) => {
+  if (idx === 0) { // Reviews Processing System
+    return {
+      ...project,
+      title: "Sistema de Processament de Ressenyes",
+      description: "Sistema d'alt rendiment basat en esdeveniments que processa ressenyes de programari a Gartner Digital Markets",
+      longDescription: "Vaig arquitectar i implementar un sistema escalable de microserveis que ingereix, valida i processa ressenyes de programari de múltiples fonts. Construït amb arquitectura orientada a esdeveniments usant Kafka per processament fiable de dades, implementant pipelines sofisticats de validació i mecanismes de puntuació de qualitat que potencien tots els marketplaces de Gartner Digital Markets (Capterra, GetApp, Software Advice).",
+      highlights: [
+        "Processant 100K+ ressenyes mensualment amb alta fiabilitat",
+        "Arquitectura orientada a esdeveniments amb Kafka per consistència de dades",
+        "Migració d'eina de moderació d'Angular a Next.js, millorant el rendiment en un 40%",
+        "Implementació d'AWS SNS/SQS per fluxos de treball de processament asíncron de ressenyes",
+        "Integració d'OpenSearch per cerca avançada, filtrat i analítica",
+        "Reducció d'errors de processament en un 85% mitjançant gestió robusta d'errors"
+      ]
+    };
+  } else if (idx === 1) { // User Alerts System Migration
+    return {
+      ...project,
+      title: "Migració del Sistema d'Alertes d'Usuari",
+      description: "Migració a gran escala del sistema d'alertes in-app de Lidl Plus des de monòlit a microserveis cloud-native",
+      longDescription: "Vaig liderar la migració end-to-end del sistema crític d'alertes d'usuari des de monòlit heretat a microserveis cloud-native en Azure. El sistema d'alertes entrega missatges promocionals, notificacions d'e-tickets i ofertes personalitzades directament a l'inbox de l'app Lidl Plus dels usuaris, servint a 60M+ usuaris actius en múltiples països.",
+      highlights: [
+        "Migració de 50+ tipus d'alertes (promocions, e-tickets, ofertes personalitzades) sense temps d'inactivitat",
+        "Orquestració de migració de 100M+ alertes des de SQL Server a Cosmos DB usant Azure Durable Functions",
+        "Processant milions de notificacions d'usuari diàries per 60M+ usuaris de Lidl Plus",
+        "Reducció de costos d'infraestructura en un 60% usant arquitectura serverless",
+        "Millora de latència d'entrega de notificacions de minuts a segons",
+        "Implementació d'arquitectura orientada a esdeveniments per engagement d'usuari en temps real"
+      ]
+    };
+  } else if (idx === 2) { // Rate Limiter Lab
+    return {
+      ...project,
+      title: "Rate Limiter Lab (en progrés)",
+      description: "Servei distribuït de limitació de taxa construït en Go per aprenentatge i experimentació. Actualment en progrés, però tots els detalls tècnics i objectius són visibles.",
+      longDescription: "Projecte personal per explorar algoritmes i patrons de limitació de taxa distribuïda. Implementant algoritmes de token bucket, sliding window i leaky bucket amb Redis per gestió d'estat distribuït. Enfocat en alt rendiment, baixa latència i escalabilitat horitzontal. El projecte s'està desenvolupant activament i tots els detalls tècnics, arquitectura i objectius estan documentats per transparència.",
+      highlights: [
+        "Explorant diferents algoritmes de limitació de taxa (token bucket, sliding window, leaky bucket)",
+        "Gestió d'estat distribuït recolzada per Redis",
+        "Construint per alt rendiment i baixa latència",
+        "Implementant observabilitat amb Prometheus/Grafana",
+        "Aprenent patrons de concurrència i millors pràctiques de Go",
+        "Documentant arquitectura i decisions de disseny"
+      ]
+    };
+  } else if (idx === 3) { // AI-Powered Code Review Assistant
+    return {
+      ...project,
+      title: "Assistant de Revisió de Codi amb IA",
+      description: "Sistema intel·ligent de revisió de codi utilitzant LLMs per a feedback automatitzat",
+      longDescription: "Construint un assistent d'IA que analitza pull requests, suggereix millores, detecta vulnerabilitats de seguretat i assegura estàndards de qualitat de codi. S'integra amb GitHub i proporciona feedback contextual basat en patrons específics del repositori.",
+      highlights: [
+        "Analitzant pull requests amb insights potenciats per IA",
+        "Detectant problemes de seguretat i code smells automàticament",
+        "Proporcionant suggeriments contextuals basats en patrons del codi",
+        "Integrant-se amb GitHub per flux de treball sense friccions",
+        "Aprenent i millorant del feedback de desenvolupadors"
+      ]
+    };
+  }
+  return project;
+});
 
 export function getProjects(locale: Locale) {
   switch (locale) {

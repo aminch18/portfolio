@@ -32,7 +32,8 @@
     "status": {
       "completed": "Completat",
       "inProgress": "En Progrés",
-      "planned": "Planificat"
+      "planned": "Planificat",
+      "blocked": "Properament"
     },
     "technologies": "Tecnologies",
     "highlights": "Aspectes Clau",

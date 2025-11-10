@@ -288,7 +288,7 @@ export type Project = {
   link?: string;
   github?: string;
   image?: string;
-  status: "completed" | "in-progress" | "planned";
+  status: "completed" | "in-progress" | "planned" | "blocked";
 };
 
 // ========================================
@@ -354,46 +354,67 @@ export const projects: Project[] = [
 ];
 */
 
-// PLACEHOLDER PROJECTS - Currently Active
+// REAL PROJECTS
 export const projects: Project[] = [
   {
-    title: "Project Coming Soon",
-    description: "Exciting new project currently in development",
-    longDescription: "This project is currently being developed and will be revealed soon. Stay tuned for updates on this innovative solution.",
-    technologies: ["C#", ".NET", "AWS", "Kafka", "PostgreSQL"],
+    title: "Reviews Processing System",
+    description: "High-throughput event-driven system processing software reviews at Gartner Digital Markets",
+    longDescription: "Architected and implemented a scalable microservices system that ingests, validates, and processes software reviews from multiple sources. Built with event-driven architecture using Kafka for reliable data processing, implementing sophisticated validation pipelines and quality scoring mechanisms that power all Gartner Digital Markets marketplaces (Capterra, GetApp, Software Advice).",
+    technologies: ["C#", ".NET 8", "Kafka", "PostgreSQL", "AWS EKS", "AWS SNS", "AWS SQS", "OpenSearch", "Next.js", "TypeScript", "Redis", "Docker"],
     highlights: [
-      "Details will be available soon",
-      "Innovative architecture and design",
-      "Scalable and production-ready",
-      "Following best practices and patterns"
+      "Processing 100K+ reviews monthly with high reliability",
+      "Event-driven architecture with Kafka for data consistency",
+      "Migrated moderation tool from Angular to Next.js, improving performance by 40%",
+      "Implemented AWS SNS/SQS for asynchronous review processing workflows",
+      "Integrated OpenSearch for advanced search, filtering, and analytics",
+      "Reduced processing errors by 85% through robust error handling"
     ],
-    status: "in-progress"
+    status: "completed"
   },
   {
-    title: "Project Coming Soon",
-    description: "Another exciting project in the works",
-    longDescription: "This project is currently under development. More information will be shared once it reaches a presentable stage.",
-    technologies: ["TypeScript", "Next.js", "AWS", "PostgreSQL"],
+    title: "User Alerts System Migration",
+    description: "Large-scale migration of Lidl Plus in-app alerts system from monolith to cloud-native microservices",
+    longDescription: "Led the end-to-end migration of the critical user alerts system from legacy monolith to Azure cloud-native microservices. The alerts system delivers promotional messages, e-ticket notifications, and personalized offers directly to users' Lidl Plus app inbox, serving 60M+ active users across multiple countries.",
+    technologies: ["C#", ".NET 6", "Azure Functions", "Azure Durable Functions", "Azure Service Bus", "Azure Event Hub", "Cosmos DB", "SQL Server", "AKS", "Terraform"],
     highlights: [
-      "Details will be available soon",
-      "Modern tech stack",
-      "High performance and reliability",
-      "Production-grade implementation"
+      "Migrated 50+ alert types (promotions, e-tickets, personalized offers) with zero downtime",
+      "Orchestrated migration of 100M+ alerts from SQL Server to Cosmos DB using Azure Durable Functions",
+      "Processing millions of user notifications daily across 60M+ Lidl Plus users",
+      "Reduced infrastructure costs by 60% using serverless architecture",
+      "Improved notification delivery latency from minutes to seconds",
+      "Implemented event-driven architecture for real-time user engagement"
     ],
-    status: "in-progress"
+    status: "completed"
   },
   {
-    title: "Project Coming Soon",
-    description: "New initiative currently being built",
-    longDescription: "This project is actively being worked on. Updates and details will be shared as development progresses.",
-    technologies: ["Go", "Kubernetes", "AWS", "Redis"],
+    title: "Rate Limiter Lab (in progress)",
+    description: "Distributed rate limiting service built in Go for learning and experimentation. Currently in progress, but all technical details and goals are visible.",
+    longDescription: "Personal project to explore distributed rate limiting algorithms and patterns. Implementing token bucket, sliding window, and leaky bucket algorithms with Redis for distributed state management. Focusing on high performance, low latency, and horizontal scalability. The project is actively being developed and all technical details, architecture, and goals are documented for transparency.",
+    technologies: ["Go", "Redis", "Docker", "Kubernetes", "Prometheus", "Grafana"],
     highlights: [
-      "Details will be available soon",
-      "Cloud-native architecture",
-      "Enterprise-grade solution",
-      "Optimized for scale"
+      "Exploring different rate limiting algorithms (token bucket, sliding window, leaky bucket)",
+      "Redis-backed distributed state management",
+      "Building for high throughput and low latency",
+      "Implementing observability with Prometheus/Grafana",
+      "Learning Go concurrency patterns and best practices",
+      "Documenting architecture and design decisions"
     ],
-    status: "in-progress"
+    status: "in-progress",
+    github: "https://github.com/aminch18/rate-limiter-labs"
+  },
+  {
+    title: "AI-Powered Code Review Assistant",
+    description: "Intelligent code review system using LLMs for automated feedback",
+    longDescription: "Building an AI assistant that analyzes pull requests, suggests improvements, detects security vulnerabilities, and ensures code quality standards. Integrates with GitHub and provides contextual feedback based on repository-specific patterns.",
+    technologies: ["Python", "OpenAI GPT-4", "LangChain", "FastAPI", "PostgreSQL", "Docker"],
+    highlights: [
+      "Analyzing pull requests with AI-powered insights",
+      "Detecting security issues and code smells automatically",
+      "Providing contextual suggestions based on codebase patterns",
+      "Integrating with GitHub for seamless workflow",
+      "Learning and improving from developer feedback"
+    ],
+    status: "blocked"
   }
 ];
 

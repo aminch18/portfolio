@@ -32,7 +32,8 @@
     "status": {
       "completed": "Completed",
       "inProgress": "In Progress",
-      "planned": "Planned"
+      "planned": "Planned",
+      "blocked": "Coming Soon"
     },
     "technologies": "Technologies",
     "highlights": "Key Highlights",
