@@ -28,7 +28,7 @@ export function HeroSection({ isLoaded }: HeroSectionProps) {
             isLoaded ? "scale-100 opacity-100" : "scale-50 opacity-0"
           }`}
         >
-          <div className="relative mx-auto w-40 h-40 mt-16 md:mt-20">
+          <div className="relative mx-auto w-40 h-40 mt-24 md:mt-28">
             <div className="absolute inset-0 rounded-full animate-pulse" style={{ background: 'var(--accent-primary)', opacity: 0.3 }}></div>
             <div className="absolute inset-2 bg-[var(--bg-primary)] rounded-full flex items-center justify-center overflow-hidden">
               <img 

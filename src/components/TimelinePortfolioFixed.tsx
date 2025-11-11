@@ -10,8 +10,6 @@ import { EducationSection } from "./portfolio/EducationSection";
 import { ProjectsSection } from "./portfolio/ProjectsSection";
 import { FooterCTA } from "./portfolio/FooterCTA";
 import { AnimatedBackground } from "./ui/AnimatedBackground";
-import ThemeSwitcher from "./ThemeSwitcher";
-import LanguageSwitcher from "./LanguageSwitcher";
 
 const TimelinePortfolio = () => {
   const [isLoaded, setIsLoaded] = useState(false);
@@ -32,8 +30,6 @@ const TimelinePortfolio = () => {
 
       {/* Content */}
       <div className="relative z-10">
-        <LanguageSwitcher menuPosition={menuPosition} />
-        <ThemeSwitcher menuPosition={menuPosition} />
         <FloatingNavigation 
           menuPosition={menuPosition} 
           activeSection={activeSection} 
