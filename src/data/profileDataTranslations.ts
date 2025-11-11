@@ -66,7 +66,7 @@ const journeyES = journeyEN.map((company, idx) => {
         {
           ...company.roles[0],
           title: "Ingeniero de Software Senior",
-          period: "Octubre 2023 — Presente",
+          period: "Octubre 2024 — Presente",
           achievements: [
             "Liderando ingenieros junior y mid-level, realizando entrevistas técnicas y revisiones de código",
             "Definiendo e implementando estándares arquitectónicos transversales entre equipos",
@@ -78,7 +78,7 @@ const journeyES = journeyEN.map((company, idx) => {
         {
           ...company.roles[1],
           title: "Ingeniero de Software Avanzado",
-          period: "Mayo 2022 — Octubre 2023",
+          period: "Mayo 2022 — Octubre 2024",
           achievements: [
             "Diseñé y mantuve pipelines transformando reseñas en información de calidad",
             "Lideré la refactorización del sistema de puntuación de reseñas en un motor desacoplado y resiliente",
@@ -99,7 +99,7 @@ const journeyES = journeyEN.map((company, idx) => {
         {
           ...company.roles[0],
           title: "Desarrollador de Software Backend Sr",
-          period: "~Marzo 2020 — Mayo 2022",
+          period: "Marzo 2020 — Mayo 2022",
           achievements: [
             "Migré sistemas monolíticos a microservicios en .NET",
             "Trabajé en el squad de Comunicaciones implementando sistemas de promoción y notificación de usuarios",
@@ -168,7 +168,7 @@ const journeyCA = journeyEN.map((company, idx) => {
         {
           ...company.roles[0],
           title: "Enginyer de Programari Senior",
-          period: "Octubre 2023 — Present",
+          period: "Octubre 2024 — Present",
           achievements: [
             "Liderant enginyers junior i mid-level, realitzant entrevistes tècniques i revisions de codi",
             "Definint i implementant estàndards arquitectònics transversals entre equips",
@@ -180,7 +180,7 @@ const journeyCA = journeyEN.map((company, idx) => {
         {
           ...company.roles[1],
           title: "Enginyer de Programari Avançat",
-          period: "Maig 2022 — Octubre 2023",
+          period: "Maig 2022 — Octubre 2024",
           achievements: [
             "Vaig dissenyar i mantenir pipelines transformant ressenyes en informació de qualitat",
             "Vaig liderar la refactorització del sistema de puntuació de ressenyes en un motor desacoblat i resilient",
@@ -201,7 +201,7 @@ const journeyCA = journeyEN.map((company, idx) => {
         {
           ...company.roles[0],
           title: "Desenvolupador de Programari Backend Sr",
-          period: "~Març 2020 — Maig 2022",
+          period: "Març 2020 — Maig 2022",
           achievements: [
             "Vaig migrar sistemes monolítics a microserveis en .NET",
             "Vaig treballar en l'squad de Comunicacions implementant sistemes de promoció i notificació d'usuaris",
@@ -402,128 +402,6 @@ export function getSkills(locale: Locale) {
 export function getLanguages(locale: Locale) {
   return languagesEN;
 }
-
-// ========================================
-// PROJECTS TRANSLATIONS
-// ========================================
-// NOTE: Real project translations are preserved as comments below
-// To restore, uncomment the detailed translations and comment out the placeholder ones
-
-/* REAL PROJECTS TRANSLATIONS - BACKUP (Uncomment to restore)
-
-const projectsES = projectsEN.map((project, idx) => {
-  if (idx === 0) {
-    return {
-      ...project,
-      title: "Sistema Distribuido de Procesamiento de Reseñas",
-      description: "Sistema orientado a eventos de alto rendimiento que procesa millones de reseñas de software",
-      longDescription: "Construí una arquitectura de microservicios escalable que ingiere, valida y enriquece reseñas de software desde múltiples fuentes. Implementé event sourcing con Kafka para un procesamiento de datos confiable y pipelines sofisticados de NLP para análisis de sentimiento y puntuación de calidad.",
-      highlights: [
-        "Procesando más de 1M de reseñas mensuales con latencia p99 <100ms",
-        "99.95% de disponibilidad con failover automático y recuperación",
-        "Reduje inconsistencias de datos en un 90% mediante event sourcing",
-        "Implementé puntuación de calidad en tiempo real que afecta $50M+ en ingresos"
-      ]
-    };
-  } else if (idx === 1) {
-    return {
-      ...project,
-      title: "Plataforma de Analítica Multi-Tenant",
-      description: "Plataforma de analítica en tiempo real que sirve insights a millones de usuarios",
-      longDescription: "Diseñé e implementé un sistema de analítica multi-tenant que agrega datos de reseñas y genera insights accionables. Construí APIs RESTful y GraphQL con estrategias sofisticadas de caché y optimización de consultas para manejar cargas de alto tráfico.",
-      highlights: [
-        "Sirviendo 10M+ de peticiones API diarias",
-        "Reduje el tiempo de respuesta de consultas en un 70% mediante caché",
-        "Construí monitorización completa con dashboards personalizados de Datadog",
-        "Implementé framework de pruebas A/B que afecta decisiones de producto"
-      ]
-    };
-  } else if (idx === 2) {
-    return {
-      ...project,
-      title: "Automatización de Infraestructura Cloud",
-      description: "Solución Infrastructure-as-Code para despliegues AWS multi-región",
-      longDescription: "Lideré la migración de infraestructura monolítica a configuraciones modulares de Terraform. Implementé flujos de trabajo GitOps con pruebas automatizadas, escaneo de seguridad y despliegues progresivos a través de múltiples entornos.",
-      highlights: [
-        "Reduje el tiempo de despliegue de 2 horas a 15 minutos",
-        "Despliegues sin tiempo de inactividad con rollback automático",
-        "Reducción del 95% de costos mediante optimización de recursos",
-        "Implementé recuperación ante desastres con RTO <5 minutos"
-      ]
-    };
-  } else {
-    return {
-      ...project,
-      title: "Asistente de Revisión de Código con IA",
-      description: "Sistema inteligente de revisión de código usando LLMs para feedback automatizado",
-      longDescription: "Construyendo un asistente de IA que analiza pull requests, sugiere mejoras, detecta vulnerabilidades de seguridad y asegura estándares de calidad de código. Se integra con GitHub y proporciona feedback contextual basado en patrones específicos del repositorio.",
-      highlights: [
-        "Analizando 500+ PRs semanalmente a través de múltiples repositorios",
-        "Detectando 40+ problemas de seguridad antes de producción",
-        "Reduciendo el tiempo de revisión de código en un 30%",
-        "Entrenando modelos personalizados en el código base interno"
-      ]
-    };
-  }
-});
-
-const projectsCA = projectsEN.map((project, idx) => {
-  if (idx === 0) {
-    return {
-      ...project,
-      title: "Sistema Distribuït de Processament de Ressenyes",
-      description: "Sistema orientat a esdeveniments d'alt rendiment que processa milions de ressenyes de programari",
-      longDescription: "Vaig construir una arquitectura de microserveis escalable que ingereix, valida i enriqueix ressenyes de programari des de múltiples fonts. Vaig implementar event sourcing amb Kafka per a un processament de dades fiable i pipelines sofisticats de NLP per a anàlisi de sentiment i puntuació de qualitat.",
-      highlights: [
-        "Processant més d'1M de ressenyes mensuals amb latència p99 <100ms",
-        "99.95% de disponibilitat amb failover automàtic i recuperació",
-        "Vaig reduir inconsistències de dades en un 90% mitjançant event sourcing",
-        "Vaig implementar puntuació de qualitat en temps real que afecta $50M+ en ingressos"
-      ]
-    };
-  } else if (idx === 1) {
-    return {
-      ...project,
-      title: "Plataforma d'Analítica Multi-Tenant",
-      description: "Plataforma d'analítica en temps real que serveix insights a milions d'usuaris",
-      longDescription: "Vaig dissenyar i implementar un sistema d'analítica multi-tenant que agrega dades de ressenyes i genera insights accionables. Vaig construir APIs RESTful i GraphQL amb estratègies sofisticades de cache i optimització de consultes per gestionar càrregues d'alt tràfic.",
-      highlights: [
-        "Servint 10M+ de peticions API diàries",
-        "Vaig reduir el temps de resposta de consultes en un 70% mitjançant cache",
-        "Vaig construir monitorització completa amb dashboards personalitzats de Datadog",
-        "Vaig implementar framework de proves A/B que afecta decisions de producte"
-      ]
-    };
-  } else if (idx === 2) {
-    return {
-      ...project,
-      title: "Automatització d'Infraestructura Cloud",
-      description: "Solució Infrastructure-as-Code per a desplegaments AWS multi-regió",
-      longDescription: "Vaig liderar la migració d'infraestructura monolítica a configuracions modulars de Terraform. Vaig implementar fluxos de treball GitOps amb proves automatitzades, escaneig de seguretat i desplegaments progressius a través de múltiples entorns.",
-      highlights: [
-        "Vaig reduir el temps de desplegament de 2 hores a 15 minuts",
-        "Desplegaments sense temps d'inactivitat amb rollback automàtic",
-        "Reducció del 95% de costos mitjançant optimització de recursos",
-        "Vaig implementar recuperació davant desastres amb RTO <5 minuts"
-      ]
-    };
-  } else {
-    return {
-      ...project,
-      title: "Assistant de Revisió de Codi amb IA",
-      description: "Sistema intel·ligent de revisió de codi utilitzant LLMs per a feedback automatitzat",
-      longDescription: "Construint un assistent d'IA que analitza pull requests, suggereix millores, detecta vulnerabilitats de seguretat i assegura estàndards de qualitat de codi. S'integra amb GitHub i proporciona feedback contextual basat en patrons específics del repositori.",
-      highlights: [
-        "Analitzant 500+ PRs setmanalment a través de múltiples repositoris",
-        "Detectant 40+ problemes de seguretat abans de producció",
-        "Reduint el temps de revisió de codi en un 30%",
-        "Entrenant models personalitzats en el codi base intern"
-      ]
-    };
-  }
-});
-
-*/
 
 // REAL PROJECTS TRANSLATIONS
 const projectsES = projectsEN.map((project, idx) => {

@@ -33,7 +33,7 @@ export const engineeringJourney: Company[] = [
     roles: [
       {
         title: "Senior Software Engineer",
-        period: "October 2023 — Present",
+        period: "December 2024 — Present",
         achievements: [
           "Leading junior and mid-level engineers, conducting technical interviews and code reviews",
           "Defining and implementing transversal architectural standards across teams",
@@ -45,7 +45,7 @@ export const engineeringJourney: Company[] = [
       },
       {
         title: "Software Advanced Engineer",
-        period: "May 2022 — October 2023", 
+        period: "May 2022 — October 2024", 
         achievements: [
           "Designed and maintained pipelines transforming reviews into quality insights",
           "Led the refactor of the review scoring system into a decoupled, resilient engine",
@@ -69,7 +69,7 @@ export const engineeringJourney: Company[] = [
     roles: [
       {
         title: "Backend Sr Software Developer",
-        period: "~March 2020 — May 2022",
+        period: "March 2020 — May 2022",
         achievements: [
           "Migrated monolithic systems to microservices in .NET",
           "Worked on Communications squad implementing user promotion and notification systems",
@@ -291,70 +291,6 @@ export type Project = {
   status: "completed" | "in-progress" | "planned" | "blocked";
 };
 
-// ========================================
-// PROJECTS - Currently showing placeholder "Coming Soon" projects
-// ========================================
-// To restore real projects, uncomment the section below and comment out the placeholder projects
-
-/* REAL PROJECTS - BACKUP (Uncomment to restore)
-export const projects: Project[] = [
-  {
-    title: "Distributed Review Processing System",
-    description: "High-throughput event-driven system processing millions of software reviews",
-    longDescription: "Built a scalable microservices architecture that ingests, validates, and enriches software reviews from multiple sources. Implemented event sourcing with Kafka for reliable data processing and implemented sophisticated NLP pipelines for sentiment analysis and quality scoring.",
-    technologies: ["C#", ".NET 8", "Kafka", "PostgreSQL", "OpenSearch", "AWS EKS", "Redis"],
-    highlights: [
-      "Processing 1M+ reviews monthly with <100ms p99 latency",
-      "99.95% uptime with automatic failover and recovery",
-      "Reduced data inconsistencies by 90% through event sourcing",
-      "Implemented real-time quality scoring affecting $50M+ in revenue"
-    ],
-    status: "completed"
-  },
-  {
-    title: "Multi-Tenant Analytics Platform",
-    description: "Real-time analytics platform serving insights to millions of users",
-    longDescription: "Designed and implemented a multi-tenant analytics system that aggregates review data and generates actionable insights. Built RESTful and GraphQL APIs with sophisticated caching strategies and query optimization to handle high-traffic loads.",
-    technologies: ["TypeScript", "Next.js", "GraphQL", "PostgreSQL", "Redis", "AWS Lambda"],
-    highlights: [
-      "Serving 10M+ API requests daily",
-      "Reduced query response time by 70% through caching",
-      "Built comprehensive monitoring with custom Datadog dashboards",
-      "Implemented A/B testing framework affecting product decisions"
-    ],
-    status: "completed"
-  },
-  {
-    title: "Cloud Infrastructure Automation",
-    description: "Infrastructure-as-Code solution for multi-region AWS deployments",
-    longDescription: "Led migration from monolithic infrastructure to modular Terraform configurations. Implemented GitOps workflows with automated testing, security scanning, and progressive deployments across multiple environments.",
-    technologies: ["Terraform", "AWS", "EKS", "GitHub Actions", "Helm", "ArgoCD"],
-    highlights: [
-      "Reduced deployment time from 2 hours to 15 minutes",
-      "Zero-downtime deployments with automated rollback",
-      "95% cost reduction through resource optimization",
-      "Implemented disaster recovery with <5min RTO"
-    ],
-    status: "completed"
-  },
-  {
-    title: "AI-Powered Code Review Assistant",
-    description: "Intelligent code review system using LLMs for automated feedback",
-    longDescription: "Building an AI assistant that analyzes pull requests, suggests improvements, detects security vulnerabilities, and ensures code quality standards. Integrates with GitHub and provides contextual feedback based on repository-specific patterns.",
-    technologies: ["Python", "OpenAI GPT-4", "LangChain", "FastAPI", "PostgreSQL", "Docker"],
-    highlights: [
-      "Analyzing 500+ PRs weekly across multiple repositories",
-      "Detecting 40+ security issues before production",
-      "Reducing code review time by 30%",
-      "Training custom models on internal codebase"
-    ],
-    status: "in-progress",
-    github: "https://github.com"
-  }
-];
-*/
-
-// REAL PROJECTS
 export const projects: Project[] = [
   {
     title: "Reviews Processing System",
