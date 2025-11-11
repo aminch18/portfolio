@@ -36,7 +36,7 @@ export function EducationSection({ isVisible }: EducationSectionProps) {
             : "translate-y-10 opacity-0"
         }`} style={{ zIndex: 20 }}>
           <div className="relative max-w-4xl mx-auto">
-            <div className="bg-gradient-to-r from-[var(--accent-primary)]/10 to-transparent rounded-lg px-8 py-4 border-l-2 border-[var(--accent-primary)]">
+            <div className="backdrop-blur-sm bg-gradient-to-r from-[var(--accent-primary)]/10 to-transparent rounded-lg px-8 py-4 border-l-2 border-[var(--accent-primary)]">
               <p className="text-sm text-[var(--text-secondary)] leading-relaxed italic">
                 {journeyNote}
               </p>

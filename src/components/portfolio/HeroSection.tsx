@@ -76,9 +76,11 @@ export function HeroSection({ isLoaded }: HeroSectionProps) {
             </div>
           </div>
 
-          <p className="text-lg md:text-xl text-[var(--text-secondary)] max-w-3xl mx-auto leading-relaxed mb-8">
-            {profileData.summary}
-          </p>
+          <div className="backdrop-blur-sm rounded-lg px-6 py-4 max-w-3xl mx-auto mb-8">
+            <p className="text-lg md:text-xl text-[var(--text-secondary)] leading-relaxed">
+              {profileData.summary}
+            </p>
+          </div>
 
           <div className="flex flex-col sm:flex-row gap-4 justify-center mb-8">
             <button
