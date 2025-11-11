@@ -1,4 +1,4 @@
-import TimelinePortfolio from '@/components/TimelinePortfolioFixed'
+import TimelinePortfolio from '@/components/TimelinePortfolio'
 import ThemeProvider from '@/components/ThemeProvider'
 import Script from 'next/script'
 
