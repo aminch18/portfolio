@@ -30,7 +30,7 @@ export function ContactForm({ isOpen, onClose }: ContactFormProps) {
           Accept: "application/json",
         },
         body: JSON.stringify({
-          access_key: "8ba2b294-ca61-4772-985e-5054e37c3ba3", // You'll need to get this from web3forms.com
+          access_key: "8ba2b294-ca61-4772-985e-5054e37c3ba3",
           name: formData.name,
           email: formData.email,
           subject: formData.subject,

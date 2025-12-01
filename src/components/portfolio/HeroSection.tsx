@@ -35,6 +35,7 @@ export function HeroSection({ isLoaded }: HeroSectionProps) {
                 src={profile.photo} 
                 alt={profile.name}
                 className="w-full h-full object-cover rounded-full"
+                style={{ objectPosition: 'center 10%' }}
                 onError={(e) => {
                   const target = e.target as HTMLImageElement;
                   target.style.display = "none";
