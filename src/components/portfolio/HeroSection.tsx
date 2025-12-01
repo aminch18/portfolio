@@ -14,6 +14,10 @@ export function HeroSection({ isLoaded }: HeroSectionProps) {
   const [isContactFormOpen, setIsContactFormOpen] = useState(false);
   const { locale, t } = useI18n();
   const profileData = getProfileData(locale);
+  
+  // Handle basePath for GitHub Pages deployment
+  const basePath = process.env.NODE_ENV === 'production' ? '/portfolio' : '';
+  const photoSrc = profile.photo.startsWith('/') ? `${basePath}${profile.photo}` : profile.photo;
 
   return (
     <>
@@ -32,7 +36,7 @@ export function HeroSection({ isLoaded }: HeroSectionProps) {
             <div className="absolute inset-0 rounded-full animate-pulse" style={{ background: 'var(--accent-primary)', opacity: 0.3 }}></div>
             <div className="absolute inset-2 bg-[var(--bg-primary)] rounded-full flex items-center justify-center overflow-hidden">
               <img 
-                src={profile.photo} 
+                src={photoSrc} 
                 alt={profile.name}
                 className="w-full h-full object-cover rounded-full"
                 style={{ objectPosition: 'center 10%' }}
