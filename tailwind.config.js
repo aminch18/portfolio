@@ -7,27 +7,14 @@ module.exports = {
   ],
   theme: {
     extend: {
-      colors: {
-        matrix: {
-          bg: '#0a0a0a',
-          surface: '#111111',
-          border: '#1a1a1a',
-          green: '#00ff41',
-          cyan: '#00ffff',
-          white: '#ffffff',
-          gray: '#888888',
-          dark: '#1a1a1a',
-        },
-      },
       fontFamily: {
-        'mono': ['JetBrains Mono', 'Fira Code', 'Monaco', 'Consolas', 'monospace'],
-        'sans': ['Inter', 'system-ui', 'sans-serif'],
+        'display': ['Space Grotesk', 'system-ui', 'sans-serif'],
+        'sans': ['Nunito', 'system-ui', 'sans-serif'],
+        'mono': ['Recursive', 'JetBrains Mono', 'Monaco', 'monospace'],
       },
       animation: {
         'fade-in': 'fadeIn 0.5s ease-in-out',
         'slide-up': 'slideUp 0.6s ease-out',
-        'glow': 'glow 2s ease-in-out infinite alternate',
-        'terminal-cursor': 'terminalCursor 1s infinite',
       },
       keyframes: {
         fadeIn: {
@@ -37,14 +24,6 @@ module.exports = {
         slideUp: {
           '0%': { opacity: '0', transform: 'translateY(20px)' },
           '100%': { opacity: '1', transform: 'translateY(0)' },
-        },
-        glow: {
-          '0%': { boxShadow: '0 0 5px #00ff41' },
-          '100%': { boxShadow: '0 0 20px #00ff41, 0 0 30px #00ff41' },
-        },
-        terminalCursor: {
-          '0%, 50%': { opacity: '1' },
-          '51%, 100%': { opacity: '0' },
         },
       },
     },

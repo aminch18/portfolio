@@ -274,17 +274,17 @@ const educationES = educationEN.map(edu => ({
   ...edu,
   degree: edu.institution === "Universitat Oberta de Catalunya" 
     ? "Grado en Ingeniería Informática"
-    : edu.institution === "Escola Pia Mataró - Formació Professional"
+    : edu.institution === "Escola Pia Sant Anna, Mataró"
     ? "Técnico Superior en Desarrollo de Aplicaciones Multiplataforma"
     : "Grado en Ingeniería de Telecomunicaciones",
   period: edu.institution === "Universitat Oberta de Catalunya"
     ? "Sep 2021 — Presente"
-    : edu.institution === "Escola Pia Mataró - Formació Professional"
+    : edu.institution === "Escola Pia Sant Anna, Mataró"
     ? "2017 — 2019"
     : "Sep 2015 — 2017",
   description: edu.institution === "Universitat Oberta de Catalunya"
     ? "Actualmente cursando mi pasión por la Ingeniería Informática a mi propio ritmo, equilibrando trabajo y estudios. Enfocándome en arquitectura de software, sistemas distribuidos y aplicando la experiencia del mundo real al aprendizaje académico."
-    : edu.institution === "Escola Pia Mataró - Formació Professional"
+    : edu.institution === "Escola Pia Sant Anna, Mataró"
     ? "Certificación técnica en Desarrollo de Aplicaciones Multiplataforma (Educación Superior). Completado mientras trabajaba a tiempo completo, ganando experiencia práctica con Android Studio, SQL Server, Java, HTML y PHP. Esta cualificación profesional lanzó mi carrera en desarrollo de software."
     : "Comencé mi trayectoria universitaria aquí, completando 60 créditos ECTS en asignaturas básicas. Debido a circunstancias económicas, pausé mis estudios para enfocarme en el trabajo, lo que me llevó a descubrir mi verdadera pasión por el desarrollo de software.",
   status: edu.status === "In progress" ? "En curso" : edu.status === "Paused" ? "En pausa" : undefined
@@ -294,17 +294,17 @@ const educationCA = educationEN.map(edu => ({
   ...edu,
   degree: edu.institution === "Universitat Oberta de Catalunya"
     ? "Grau en Enginyeria Informàtica"
-    : edu.institution === "Escola Pia Mataró - Formació Professional"
+    : edu.institution === "Escola Pia Sant Anna, Mataró"
     ? "Tècnic Superior en Desenvolupament d'Aplicacions Multiplataforma"
     : "Grau en Enginyeria de Telecomunicacions",
   period: edu.institution === "Universitat Oberta de Catalunya"
     ? "Set 2021 — Present"
-    : edu.institution === "Escola Pia Mataró - Formació Professional"
+    : edu.institution === "Escola Pia Sant Anna, Mataró"
     ? "2017 — 2019"
     : "Set 2015 — 2017",
   description: edu.institution === "Universitat Oberta de Catalunya"
     ? "Actualment cursant la meva passió per l'Enginyeria Informàtica al meu propi ritme, equilibrant feina i estudis. Enfocant-me en arquitectura de programari, sistemes distribuïts i aplicant l'experiència del món real a l'aprenentatge acadèmic."
-    : edu.institution === "Escola Pia Mataró - Formació Professional"
+    : edu.institution === "Escola Pia Sant Anna, Mataró"
     ? "Certificació tècnica en Desenvolupament d'Aplicacions Multiplataforma (Educació Superior). Completat mentre treballava a temps complet, guanyant experiència pràctica amb Android Studio, SQL Server, Java, HTML i PHP. Aquesta qualificació professional va llançar la meva carrera en desenvolupament de programari."
     : "Vaig començar el meu trajecte universitari aquí, completant 60 crèdits ECTS en assignatures bàsiques. A causa de circumstàncies econòmiques, vaig pausar els meus estudis per enfocar-me en la feina, la qual cosa em va portar a descobrir la meva veritable passió pel desenvolupament de programari.",
   status: edu.status === "In progress" ? "En curs" : edu.status === "Paused" ? "En pausa" : undefined

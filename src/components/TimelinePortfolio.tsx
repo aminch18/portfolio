@@ -6,6 +6,8 @@ import { useCompanyExpansion } from "../hooks/useCompanyExpansion";
 import { HeroSection } from "./portfolio/HeroSection";
 import { FloatingNavigation } from "./portfolio/FloatingNavigation";
 import { JourneySection } from "./portfolio/JourneySection";
+import { SkillsSection } from "./portfolio/SkillsSection";
+import { SystemDesignSection } from "./portfolio/SystemDesignSection";
 import { EducationSection } from "./portfolio/EducationSection";
 import { ProjectsSection } from "./portfolio/ProjectsSection";
 import { FooterCTA } from "./portfolio/FooterCTA";
@@ -37,12 +39,16 @@ const TimelinePortfolio = () => {
         
         <HeroSection isLoaded={isLoaded} />
         
-        <JourneySection 
+        <JourneySection
           isVisible={isVisible}
           expandedCompanies={expandedCompanies}
           toggleCompany={toggleCompany}
         />
-        
+
+        <SystemDesignSection isVisible={isVisible} />
+
+        <SkillsSection isVisible={isVisible} />
+
         <EducationSection isVisible={isVisible} />
         
         <ProjectsSection isVisible={isVisible} />

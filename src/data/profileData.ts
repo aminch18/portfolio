@@ -22,30 +22,54 @@ export type Company = {
 
 export const engineeringJourney: Company[] = [
   {
-    company: "Gartner Digital Markets",
-    period: "May 2022 — Present",
-    location: "Barcelona, Spain",
-    description: "Reviews Platform team powering all Gartner Digital Markets marketplaces (Capterra, GetApp, Software Advice). Processing millions of software reviews to generate reliable, actionable insights.",
+    company: "Schwarz Digits",
+    period: "Jan 2026 — Present",
+    location: "Barcelona, Spain (hybrid)",
+    description: "Lidl Plus eMobility — the EV-charging product integrated into the Lidl Plus and Kaufland apps. Defining technical solutions end-to-end with a strong product mindset.",
     icon: Rocket,
     side: "left",
+    companyLogo: "",
+    companyFallback: "SD",
+    roles: [
+      {
+        title: "Senior Software Engineer · Full-Stack",
+        period: "Jan 2026 — Present",
+        achievements: [
+          "Refactored 35k+ lines across the eMobility ecosystem in under 5 months, leaving the codebase clean, documented and scalable",
+          "Designed and built an internal SaaS-style operations hub (RBAC, network-scoped) used across markets",
+          "Lifted reliability and observability with integration tests, structured logging and metric-based alerts (OpenTelemetry + Mimir/Grafana)",
+          "Built Databricks ETLs for analytics and authored ADRs capturing architectural direction",
+          "Introduced cross-team practice changes and partnered with Product on an emerging AI assistant strategy"
+        ],
+        technologies: ["C#", ".NET", "TypeScript", "Next.js", "STACKIT", "NATS JetStream", "PostgreSQL", "OpenTelemetry", "Grafana", "Databricks"]
+      }
+    ]
+  },
+  {
+    company: "Gartner Digital Markets",
+    period: "May 2022 — Nov 2025",
+    location: "Barcelona, Spain",
+    description: "Reviews Platform team powering all Gartner Digital Markets marketplaces (Capterra, GetApp, Software Advice). Processing millions of software reviews to generate reliable, actionable insights.",
+    icon: Target,
+    side: "right",
     companyLogo: "https://emt.gartnerweb.com/ngw/commonassets/images/build-graphics/gartner-logos/gartner.svg",
     companyFallback: "GDM",
     roles: [
       {
         title: "Senior Software Engineer",
-        period: "December 2024 — Present",
+        period: "Oct 2024 — Nov 2025",
         achievements: [
-          "Leading junior and mid-level engineers, conducting technical interviews and code reviews",
-          "Defining and implementing transversal architectural standards across teams",
-          "Leading complex initiatives that span multiple teams and impact business metrics",
-          "Working closely with Product, SEO, and Site teams on strategic initiatives",
-          "Leading efforts to improve system performance, reliability, and operational efficiency"
+          "Led junior and mid-level engineers, conducting technical interviews and code reviews",
+          "Defined and implemented transversal architectural standards across squads",
+          "Led complex initiatives spanning multiple teams and impacting business metrics",
+          "Drove the Updated Reviews initiative with SEO and Sites teams to improve organic visibility",
+          "Led efforts to improve system performance, reliability, and operational efficiency"
         ],
         technologies: ["C#", ".NET 8", ".NET 9", "TypeScript", "Next.js", "React", "PostgreSQL", "Kafka", "AWS EKS", "OpenSearch"]
       },
       {
-        title: "Software Advanced Engineer",
-        period: "May 2022 — October 2024", 
+        title: "Software Engineer II",
+        period: "May 2022 — Oct 2024",
         achievements: [
           "Designed and maintained pipelines transforming reviews into quality insights",
           "Led the refactor of the review scoring system into a decoupled, resilient engine",
@@ -62,8 +86,8 @@ export const engineeringJourney: Company[] = [
     period: "September 2019 — May 2022",
     location: "Barcelona, Spain", 
     description: "Working on Lidl Plus App project serving more than 60 million users. High-availability backend system based on microservices, cloud, data analysis, and real-time data ingestion.",
-    icon: Target,
-    side: "right",
+    icon: Zap,
+    side: "left",
     companyLogo: "https://www.plainconcepts.com/wp-content/uploads/2023/01/logo.svg",
     companyFallback: "PC",
     roles: [
@@ -97,8 +121,8 @@ export const engineeringJourney: Company[] = [
     period: "May 2018 — September 2019",
     location: "Barcelona, Spain",
     description: "Dual internship program and early career development focusing on both Front-end and Back-end development with SharePoint Online and Azure Functions.",
-    icon: Zap,
-    side: "left",
+    icon: Users,
+    side: "right",
     companyLogo: "https://pasiona.com/wp-content/themes/pasiona_theme/assets/svg/pasiona-logo.svg",
     companyFallback: "PA",
     roles: [
@@ -150,7 +174,7 @@ export const education: Education[] = [
   },
   {
     degree: "Senior Technician in Crossplatform Application Development",
-    institution: "Escola Pia Mataró - Formació Professional",
+    institution: "Escola Pia Sant Anna, Mataró",
     period: "2017 — 2019",
     description: "Technical certification in Crossplatform Applications Development (Higher Education). Completed while working full-time, gaining hands-on experience with Android Studio, SQL Server, Java, HTML, and PHP. This professional qualification launched my career in software development.",
     logo: "https://media.licdn.com/dms/image/v2/C4E0BAQHwVGV9Gb8l8g/company-logo_100_100/company-logo_100_100/0/1630650212178/fp_escola_pia_matar_logo?e=1764201600&v=beta&t=YOHNgZ5w_g5odZ9-Xex4uyhQtKdilOEXQZFHXU2bFqs"
@@ -178,7 +202,7 @@ export type Certificate = {
 
 export const certificates: Certificate[] = [
   {
-    name: "EF SET English Certificate 71/100 (C2 Proficient)",
+    name: "EF SET English Certificate 71/100 (C1 Proficient)",
     issuer: "EF SET",
     date: "Apr 2025",
     logo: "https://media.licdn.com/dms/image/v2/D4E0BAQEw-1S8jictTA/company-logo_100_100/B4EZdFpZBcH0AQ-/0/1749220168176/efset_logo?e=1764201600&v=beta&t=aRz6u0ZU7UnuKVwg3BQXYEiJDUHptUwfBfZtyUbDdwo"
@@ -274,9 +298,9 @@ export type Language = {
 
 export const languages: Language[] = [
   { name: "Spanish", level: 100, description: "Native" },
-  { name: "English", level: 90, description: "Fluent" },
-  { name: "French", level: 70, description: "Intermediate" },
-  { name: "Arabic", level: 85, description: "Advanced" }
+  { name: "Catalan", level: 100, description: "Native" },
+  { name: "Arabic", level: 100, description: "Native" },
+  { name: "English", level: 85, description: "C1 · EF SET 71/100" }
 ];
 
 export type Project = {
@@ -363,6 +387,5 @@ export const profile = {
   photo: "/hero-image.png",
   linkedin: "https://www.linkedin.com/in/amin-chouaibi-el-azaar/",
   github: "https://github.com/aminch18",
-  phone: "+34643174896",
   email: "experimentalaminch@outlook.com"
 };
