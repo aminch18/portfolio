@@ -8,11 +8,11 @@ export default function Home() {
     "@type": "Person",
     "name": "Amin Chouaibi El Azaar",
     "url": "https://aminch18.github.io/portfolio",
-    "image": "https://media.licdn.com/dms/image/v2/D4D03AQFifrbYAS7S0g/profile-displayphoto-scale_200_200/B4DZoWWCMfJcAY-/0/1761311467201?e=1763596800&v=beta&t=dIyDiBEsfUcqWsp4jwGb3lPwBwS16jDOQlBCs3aDu_M",
+    "image": "https://aminch18.github.io/portfolio/hero-image.png",
     "jobTitle": "Senior Software Engineer",
     "worksFor": {
       "@type": "Organization",
-      "name": "Gartner Digital Markets"
+      "name": "Schwarz Digits"
     },
     "address": {
       "@type": "PostalAddress",
@@ -34,6 +34,7 @@ export default function Home() {
       }
     ],
     "knowsAbout": [
+      "Vertical Slice Architecture",
       "Software Engineering",
       ".NET",
       "C#",
@@ -45,6 +46,7 @@ export default function Home() {
       "Cloud Computing",
       "TypeScript",
       "PostgreSQL",
+      "MongoDB",
       "Docker",
       "Kubernetes"
     ],
@@ -52,8 +54,7 @@ export default function Home() {
       "https://www.linkedin.com/in/amin-chouaibi-el-azaar/",
       "https://github.com/aminch18"
     ],
-    "email": "experimentalaminch@outlook.com",
-    "telephone": "+34643174896"
+    "email": "experimentalaminch@outlook.com"
   };
 
   return (

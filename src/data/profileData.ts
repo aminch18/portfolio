@@ -22,30 +22,74 @@ export type Company = {
 
 export const engineeringJourney: Company[] = [
   {
-    company: "Gartner Digital Markets",
-    period: "May 2022 — Present",
-    location: "Barcelona, Spain",
-    description: "Reviews Platform team powering all Gartner Digital Markets marketplaces (Capterra, GetApp, Software Advice). Processing millions of software reviews to generate reliable, actionable insights.",
+    company: "Schwarz Digits",
+    period: "Jan 2026 — Present",
+    location: "Barcelona, Spain (hybrid)",
+    description: "From EV charging and telecom operations to enterprise AI: I work across backend, product and platform challenges at Schwarz Digits. I now contribute to the newly formed team building the group's enterprise AI platform.",
     icon: Rocket,
     side: "left",
-    companyLogo: "https://emt.gartnerweb.com/ngw/commonassets/images/build-graphics/gartner-logos/gartner.svg",
+    companyLogo: "/companies/schwarz-digits.svg",
+    companyFallback: "SD",
+    roles: [
+      {
+        title: "Senior Software Engineer · Enterprise AI Platform",
+        period: "Oct 2026 — Present",
+        achievements: [
+          "Joined the newly formed senior engineering team building Schwarz Group's enterprise AI platform",
+          "Before joining the team, explored platform building blocks through Kubernetes PoCs, AI Gateway evaluations and workflow / agent orchestration experiments"
+        ],
+        technologies: ["Kubernetes", "AI Gateways", "Workflow Orchestration", "AI Agents"]
+      },
+      {
+        title: "Senior Software Engineer · Lidl Connect",
+        period: "May 2026 — Oct 2026",
+        achievements: [
+          "Helped build the foundations of a pan-European mobile service within a cross-functional task force, connecting the product to the Lidl Plus ecosystem",
+          "Turned operational needs into a PRD and architecture for a new SaaS covering country configuration and workflows for Support, Product and Engineering; handed the design over for implementation when moving to the AI team",
+          "Designed service integrations around Sagas, the Outbox pattern and RabbitMQ to keep distributed workflows consistent and resilient",
+          "Owned load and performance testing to assess throughput and resilience before launch"
+        ],
+        technologies: ["Event-Driven Architecture", "RabbitMQ", "Sagas", "Outbox Pattern", "Performance Testing"]
+      },
+      {
+        title: "Senior Software Engineer · Lidl Plus eMobility",
+        period: "Jan 2026 — May 2026",
+        achievements: [
+          "Built the charging domain's first product back-office and documented how it works, giving teams a shared reference for operating and evolving the product",
+          "Refactored 35k+ lines across the charging ecosystem, including billing, and captured design and maintenance decisions in an ADR",
+          "Built an operations hub with role-based and network-scoped access for Country Managers, rollout, Support and Engineering",
+          "Made services easier to operate with integration tests, structured logs and OpenTelemetry / Grafana alerts; built Databricks ETLs for analytics",
+          "Worked with Product and other departments to turn technical constraints into shared decisions"
+        ],
+        technologies: ["C#", ".NET", "TypeScript", "Next.js", "STACKIT", "NATS JetStream", "PostgreSQL", "OpenTelemetry", "Grafana", "Databricks"]
+      }
+    ]
+  },
+  {
+    company: "Gartner Digital Markets",
+    period: "May 2022 — Nov 2025",
+    location: "Barcelona, Spain",
+    description: "Reviews Platform team powering all Gartner Digital Markets marketplaces (Capterra, GetApp, Software Advice). Processing millions of software reviews to generate reliable, actionable insights.",
+    icon: Target,
+    side: "right",
+    companyLogo: "/companies/gartner.svg",
     companyFallback: "GDM",
     roles: [
       {
         title: "Senior Software Engineer",
-        period: "December 2024 — Present",
+        period: "Oct 2024 — Nov 2025",
         achievements: [
-          "Leading junior and mid-level engineers, conducting technical interviews and code reviews",
-          "Defining and implementing transversal architectural standards across teams",
-          "Leading complex initiatives that span multiple teams and impact business metrics",
-          "Working closely with Product, SEO, and Site teams on strategic initiatives",
-          "Leading efforts to improve system performance, reliability, and operational efficiency"
+          "Led junior and mid-level engineers, conducting technical interviews and code reviews",
+          "Defined and implemented transversal architectural standards across squads",
+          "Led complex initiatives spanning multiple teams and impacting business metrics",
+          "Drove the Updated Reviews initiative with SEO and Sites teams to improve organic visibility",
+          "Led efforts to improve system performance, reliability, and operational efficiency"
         ],
         technologies: ["C#", ".NET 8", ".NET 9", "TypeScript", "Next.js", "React", "PostgreSQL", "Kafka", "AWS EKS", "OpenSearch"]
       },
       {
-        title: "Software Advanced Engineer",
-        period: "May 2022 — October 2024", 
+        title: "Software Engineer II",
+        period: "May 2022 — Oct 2024",
         achievements: [
           "Designed and maintained pipelines transforming reviews into quality insights",
           "Led the refactor of the review scoring system into a decoupled, resilient engine",
@@ -62,9 +106,9 @@ export const engineeringJourney: Company[] = [
     period: "September 2019 — May 2022",
     location: "Barcelona, Spain", 
     description: "Working on Lidl Plus App project serving more than 60 million users. High-availability backend system based on microservices, cloud, data analysis, and real-time data ingestion.",
-    icon: Target,
-    side: "right",
-    companyLogo: "https://www.plainconcepts.com/wp-content/uploads/2023/01/logo.svg",
+    icon: Zap,
+    side: "left",
+    companyLogo: "/companies/plain-concepts.svg",
     companyFallback: "PC",
     roles: [
       {
@@ -97,9 +141,9 @@ export const engineeringJourney: Company[] = [
     period: "May 2018 — September 2019",
     location: "Barcelona, Spain",
     description: "Dual internship program and early career development focusing on both Front-end and Back-end development with SharePoint Online and Azure Functions.",
-    icon: Zap,
-    side: "left",
-    companyLogo: "https://pasiona.com/wp-content/themes/pasiona_theme/assets/svg/pasiona-logo.svg",
+    icon: Users,
+    side: "right",
+    companyLogo: "/companies/pasiona.svg",
     companyFallback: "PA",
     roles: [
       {
@@ -150,7 +194,7 @@ export const education: Education[] = [
   },
   {
     degree: "Senior Technician in Crossplatform Application Development",
-    institution: "Escola Pia Mataró - Formació Professional",
+    institution: "Escola Pia Sant Anna, Mataró",
     period: "2017 — 2019",
     description: "Technical certification in Crossplatform Applications Development (Higher Education). Completed while working full-time, gaining hands-on experience with Android Studio, SQL Server, Java, HTML, and PHP. This professional qualification launched my career in software development.",
     logo: "https://media.licdn.com/dms/image/v2/C4E0BAQHwVGV9Gb8l8g/company-logo_100_100/company-logo_100_100/0/1630650212178/fp_escola_pia_matar_logo?e=1764201600&v=beta&t=YOHNgZ5w_g5odZ9-Xex4uyhQtKdilOEXQZFHXU2bFqs"
@@ -178,7 +222,7 @@ export type Certificate = {
 
 export const certificates: Certificate[] = [
   {
-    name: "EF SET English Certificate 71/100 (C2 Proficient)",
+    name: "EF SET English Certificate 71/100 (C1 Proficient)",
     issuer: "EF SET",
     date: "Apr 2025",
     logo: "https://media.licdn.com/dms/image/v2/D4E0BAQEw-1S8jictTA/company-logo_100_100/B4EZdFpZBcH0AQ-/0/1749220168176/efset_logo?e=1764201600&v=beta&t=aRz6u0ZU7UnuKVwg3BQXYEiJDUHptUwfBfZtyUbDdwo"
@@ -274,9 +318,9 @@ export type Language = {
 
 export const languages: Language[] = [
   { name: "Spanish", level: 100, description: "Native" },
-  { name: "English", level: 90, description: "Fluent" },
-  { name: "French", level: 70, description: "Intermediate" },
-  { name: "Arabic", level: 85, description: "Advanced" }
+  { name: "Catalan", level: 100, description: "Native" },
+  { name: "Arabic", level: 100, description: "Native" },
+  { name: "English", level: 85, description: "C1 · EF SET 71/100" }
 ];
 
 export type Project = {
@@ -323,17 +367,17 @@ export const projects: Project[] = [
     status: "completed"
   },
   {
-    title: "Rate Limiter Lab (in progress)",
-    description: "Distributed rate limiting service built in Go for learning and experimentation. Currently in progress, but all technical details and goals are visible.",
-    longDescription: "Personal project to explore distributed rate limiting algorithms and patterns. Implementing token bucket, sliding window, and leaky bucket algorithms with Redis for distributed state management. Focusing on high performance, low latency, and horizontal scalability. The project is actively being developed and all technical details, architecture, and goals are documented for transparency.",
-    technologies: ["Go", "Redis", "Docker", "Kubernetes", "Prometheus", "Grafana"],
+    title: "Rate Limiter Lab",
+    description: "Five rate-limiting algorithms implemented in Go and compared under the same traffic patterns.",
+    longDescription: "A personal lab built after a production traffic spike: Token Bucket, Fixed Window, Leaky Bucket, Sliding Log and Sliding Counter share one interface and are compared through benchmarks, a Go load generator and k6 tests. Includes Kubernetes/kind scenarios that expose the limits of per-replica in-memory counters. Shared state with Redis is a next step.",
+    technologies: ["Go", "k6", "Docker", "Kubernetes", "Prometheus", "Grafana"],
     highlights: [
-      "Exploring different rate limiting algorithms (token bucket, sliding window, leaky bucket)",
-      "Redis-backed distributed state management",
-      "Building for high throughput and low latency",
-      "Implementing observability with Prometheus/Grafana",
-      "Learning Go concurrency patterns and best practices",
-      "Documenting architecture and design decisions"
+      "Five algorithms implemented from scratch behind one interface",
+      "Published comparative benchmarks with hardware and methodology",
+      "Go load generator with steady, burst and overload patterns",
+      "k6 tests running locally, in kind and through GitHub Actions",
+      "Per-algorithm metrics for Prometheus and Grafana",
+      "Multi-replica scenarios demonstrate why shared state is needed"
     ],
     status: "in-progress",
     github: "https://github.com/aminch18/rate-limiter-labs"
@@ -356,13 +400,12 @@ export const projects: Project[] = [
 
 export const profile = {
   name: "Amin Chouaibi El Azaar",
-  title: "Senior Backend Engineer",
-  summary: `Passionate about technology, software engineering, and security. My journey started in Barcelona, where curiosity for distributed systems and cloud architecture shaped my career. I believe in building reliable, scalable, and secure systems that empower people and businesses. Technology is not just a tool, but a way to solve real-world problems and create meaningful impact.`,
+  title: "Senior Software Engineer · Backend & Platforms",
+  summary: "I build the systems behind the product: services that communicate reliably, tools that make operations easier, and platforms other teams can build on. Over 8+ years, that has taken me from Lidl Plus to Gartner’s review marketplaces and back to Schwarz Digits, where I have joined the newly formed enterprise AI platform team. My focus is turning complex requirements into systems people can understand, operate and evolve.",
   location: "Barcelona, Spain",
   interests: ["Distributed Systems", "Cloud Architecture", "Security", "AI", "Open Source"],
   photo: "/hero-image.png",
   linkedin: "https://www.linkedin.com/in/amin-chouaibi-el-azaar/",
   github: "https://github.com/aminch18",
-  phone: "+34643174896",
   email: "experimentalaminch@outlook.com"
 };

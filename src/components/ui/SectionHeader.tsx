@@ -15,7 +15,7 @@ export function SectionHeader({ title, description, isVisible }: SectionHeaderPr
           : "translate-y-10 opacity-0"
       }`}
     >
-      <h2 className="text-4xl md:text-5xl font-bold mb-6" style={{ color: 'var(--accent-primary)' }}>
+      <h2 className="text-4xl md:text-6xl font-display font-bold mb-6 gradient-text inline-block">
         {title}
       </h2>
       <p className="text-xl text-[var(--text-secondary)]">

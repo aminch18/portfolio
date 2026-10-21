@@ -7,7 +7,8 @@
     "journey": "Journey",
     "skills": "Skills",
     "projects": "Projects",
-    "education": "Education"
+    "education": "Education",
+    "architecture": "Architecture"
   },
   "hero": {
     "greeting": "Hi, I'm",
@@ -15,7 +16,12 @@
     "letsTalk": "Let's Talk",
     "linkedin": "LinkedIn",
     "github": "GitHub",
-    "email": "Email"
+    "email": "Email",
+    "stats": {
+      "yearsLabel": "Years building systems",
+      "usersLabel": "Users reached",
+      "reviewsLabel": "Reviews / month"
+    }
   },
   "journey": {
     "title": "Professional Journey",

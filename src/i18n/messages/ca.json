@@ -7,7 +7,8 @@
     "journey": "Trajectòria",
     "skills": "Habilitats",
     "projects": "Projectes",
-    "education": "Educació"
+    "education": "Educació",
+    "architecture": "Arquitectura"
   },
   "hero": {
     "greeting": "Hola, sóc",
@@ -15,7 +16,12 @@
     "letsTalk": "Parlem",
     "linkedin": "LinkedIn",
     "github": "GitHub",
-    "email": "Email"
+    "email": "Email",
+    "stats": {
+      "yearsLabel": "Anys construint sistemes",
+      "usersLabel": "Usuaris assolits",
+      "reviewsLabel": "Ressenyes / mes"
+    }
   },
   "journey": {
     "title": "Trajectòria Professional",

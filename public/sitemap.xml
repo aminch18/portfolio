@@ -3,11 +3,17 @@
         xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
     <loc>https://aminch18.github.io/portfolio</loc>
-    <lastmod>2025-11-10</lastmod>
+    <lastmod>2026-10-21</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
     <xhtml:link rel="alternate" hreflang="en" href="https://aminch18.github.io/portfolio" />
     <xhtml:link rel="alternate" hreflang="es" href="https://aminch18.github.io/portfolio" />
     <xhtml:link rel="alternate" hreflang="ca" href="https://aminch18.github.io/portfolio" />
+  </url>
+  <url>
+    <loc>https://aminch18.github.io/portfolio/publications/</loc>
+    <lastmod>2026-10-21</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
   </url>
 </urlset>

@@ -13,8 +13,8 @@ import {
 // Spanish translations
 const profileES = {
   ...profileEN,
-  title: "Ingeniero Backend Senior",
-  summary: "Apasionado por la tecnología, la ingeniería de software y la seguridad. Mi camino comenzó en Barcelona, donde la curiosidad por los sistemas distribuidos y la arquitectura cloud moldeó mi carrera. Creo en construir sistemas confiables, escalables y seguros que empoderen a personas y negocios. La tecnología no es solo una herramienta, sino una forma de resolver problemas del mundo real y crear un impacto significativo.",
+  title: "Ingeniero de Software Senior · Backend y Plataformas",
+  summary: "Construeixo els sistemes que fan funcionar un producte: serveis que es comuniquen de manera fiable, eines que faciliten les operacions i plataformes sobre les quals altres equips poden treballar. En més de vuit anys he passat per Lidl Plus, els marketplaces de ressenyes de Gartner i Schwarz Digits, on ara formo part de l’equip acabat de crear per a la plataforma corporativa d’IA. M’interessa convertir problemes complexos en sistemes que es puguin entendre, operar i fer evolucionar.",
   location: "Barcelona, España",
   interests: ["Sistemas Distribuidos", "Arquitectura Cloud", "Seguridad", "IA", "Código Abierto"]
 };
@@ -22,8 +22,8 @@ const profileES = {
 // Catalan translations
 const profileCA = {
   ...profileEN,
-  title: "Enginyer Backend Senior",
-  summary: "Apassionat per la tecnologia, l'enginyeria de programari i la seguretat. El meu camí va començar a Barcelona, on la curiositat pels sistemes distribuïts i l'arquitectura cloud va donar forma a la meva carrera. Crec en construir sistemes fiables, escalables i segurs que empoderin persones i negocis. La tecnologia no és només una eina, sinó una manera de resoldre problemes del món real i crear un impacte significatiu.",
+  title: "Enginyer de Programari Sènior · Backend i Plataformes",
+  summary: "Construeixo els sistemes que fan funcionar un producte: serveis que es comuniquen de manera fiable, eines que faciliten les operacions i plataformes sobre les quals altres equips poden treballar. En més de vuit anys he passat per Lidl Plus, els marketplaces de ressenyes de Gartner i Schwarz Digits, on ara formo part de l’equip acabat de crear per a la plataforma corporativa d’IA. M’interessa convertir problemes complexos en sistemes que es puguin entendre, operar i fer evolucionar.",
   location: "Barcelona, Espanya",
   interests: ["Sistemes Distribuïts", "Arquitectura Cloud", "Seguretat", "IA", "Codi Obert"]
 };
@@ -55,18 +55,60 @@ export function getEducationJourneyNote(locale: Locale) {
 }
 
 // Engineering Journey Translations
-const journeyES = journeyEN.map((company, idx) => {
-  if (idx === 0) { // Gartner
+const journeyES = journeyEN.map((company) => {
+  if (company.company === "Schwarz Digits") {
     return {
       ...company,
-      period: "Mayo 2022 — Presente",
+      period: "Enero 2026 — Presente",
+      location: "Barcelona, España (híbrido)",
+      description: "De la recarga eléctrica y las operaciones de telecomunicaciones a la IA corporativa. En Schwarz Digits trabajo entre backend, producto y plataformas; ahora, dentro del equipo recién creado para construir la plataforma de IA del grupo.",
+      roles: [
+        {
+          ...company.roles[0],
+          title: "Ingeniero de Software Senior · Plataforma de IA Corporativa",
+          period: "Octubre 2026 — Presente",
+          achievements: [
+            "Me he incorporado al equipo senior recién creado para construir la plataforma corporativa de IA de Schwarz Group",
+            "Antes de incorporarme al equipo, exploré piezas de la plataforma con pruebas de concepto en Kubernetes, evaluación de AI Gateways y experimentos de orquestación de workflows y agentes"
+          ]
+        },
+        {
+          ...company.roles[1],
+          title: "Ingeniero de Software Senior · Lidl Connect",
+          period: "Mayo 2026 — Octubre 2026",
+          achievements: [
+            "Participé en el equipo multidisciplinar que sentó las bases de un nuevo operador móvil paneuropeo conectado al ecosistema Lidl Plus",
+            "Traduje las necesidades de operaciones a un PRD y al diseño de un SaaS para gestionar configuración por país y procesos de Soporte, Producto e Ingeniería; dejé la arquitectura preparada para su implementación al pasar al equipo de IA",
+            "Diseñé integraciones entre servicios con Sagas, el patrón Outbox y RabbitMQ para mantener la consistencia y la resiliencia de los procesos distribuidos",
+            "Me responsabilicé de las pruebas de carga y rendimiento para evaluar la capacidad y la resiliencia antes del lanzamiento"
+          ]
+        },
+        {
+          ...company.roles[2],
+          title: "Ingeniero de Software Senior · Lidl Plus eMobility",
+          period: "Enero 2026 — Mayo 2026",
+          achievements: [
+            "Construí el primer back-office de producto del dominio de recarga y su documentación técnica, dando al equipo una referencia compartida para operar y evolucionar el producto",
+            "Refactoricé más de 35.000 líneas del ecosistema, incluida facturación, y recogí las decisiones de diseño y mantenimiento en un ADR",
+            "Desarrollé un hub de operaciones con acceso por rol y red para responsables de país, despliegue, Soporte e Ingeniería",
+            "Mejoré la operación con pruebas de integración, logs estructurados y alertas con OpenTelemetry y Grafana; construí ETLs en Databricks para analítica",
+            "Trabajé con Producto y otros departamentos para convertir las restricciones técnicas en decisiones compartidas"
+          ]
+        },
+      ]
+    };
+  }
+  if (company.company === "Gartner Digital Markets") {
+    return {
+      ...company,
+      period: "Mayo 2022 — Noviembre 2025",
       location: "Barcelona, España",
       description: "Equipo de la Plataforma de Reseñas que impulsa todos los marketplaces de Gartner Digital Markets (Capterra, GetApp, Software Advice). Procesando millones de reseñas de software para generar información confiable y accionable.",
       roles: [
         {
           ...company.roles[0],
           title: "Ingeniero de Software Senior",
-          period: "Octubre 2024 — Presente",
+          period: "Octubre 2024 — Noviembre 2025",
           achievements: [
             "Liderando ingenieros junior y mid-level, realizando entrevistas técnicas y revisiones de código",
             "Definiendo e implementando estándares arquitectónicos transversales entre equipos",
@@ -89,7 +131,7 @@ const journeyES = journeyEN.map((company, idx) => {
         }
       ]
     };
-  } else if (idx === 1) { // Plain Concepts
+  } else if (company.company === "Plain Concepts - SCRM Lidl Digital Hub") {
     return {
       ...company,
       period: "Septiembre 2019 — Mayo 2022",
@@ -121,7 +163,7 @@ const journeyES = journeyEN.map((company, idx) => {
         }
       ]
     };
-  } else { // Pasiona
+  } else if (company.company === "Pasiona Consulting") {
     return {
       ...company,
       period: "Mayo 2018 — Septiembre 2019",
@@ -155,20 +197,63 @@ const journeyES = journeyEN.map((company, idx) => {
       ]
     };
   }
+  return company;
 });
 
-const journeyCA = journeyEN.map((company, idx) => {
-  if (idx === 0) { // Gartner
+const journeyCA = journeyEN.map((company) => {
+  if (company.company === "Schwarz Digits") {
     return {
       ...company,
-      period: "Maig 2022 — Present",
+      period: "Gener 2026 — Present",
+      location: "Barcelona, Espanya (híbrid)",
+      description: "De la recàrrega elèctrica i les operacions de telecomunicacions a la IA corporativa. A Schwarz Digits treballo entre backend, producte i plataformes; ara, dins de l’equip acabat de crear per construir la plataforma d’IA del grup.",
+      roles: [
+        {
+          ...company.roles[0],
+          title: "Enginyer de Programari Sènior · Plataforma d’IA Corporativa",
+          period: "Octubre 2026 — Present",
+          achievements: [
+            "M’he incorporat a l’equip sènior acabat de crear per construir la plataforma corporativa d’IA de Schwarz Group",
+            "Abans d’incorporar-me a l’equip, vaig explorar peces de la plataforma amb proves de concepte a Kubernetes, avaluació d’AI Gateways i experiments d’orquestració de workflows i agents"
+          ]
+        },
+        {
+          ...company.roles[1],
+          title: "Enginyer de Programari Sènior · Lidl Connect",
+          period: "Maig 2026 — Octubre 2026",
+          achievements: [
+            "Vaig participar en l’equip multidisciplinari que va posar les bases d’un nou operador mòbil paneuropeu connectat a l’ecosistema Lidl Plus",
+            "Vaig traduir les necessitats d’operacions en un PRD i en el disseny d’un SaaS per gestionar la configuració per país i els processos de Suport, Producte i Enginyeria; vaig deixar l’arquitectura preparada per implementar-la en passar a l’equip d’IA",
+            "Vaig dissenyar integracions entre serveis amb Sagas, el patró Outbox i RabbitMQ per mantenir la consistència i la resiliència dels processos distribuïts",
+            "Em vaig responsabilitzar de les proves de càrrega i rendiment per avaluar la capacitat i la resiliència abans del llançament"
+          ]
+        },
+        {
+          ...company.roles[2],
+          title: "Enginyer de Programari Sènior · Lidl Plus eMobility",
+          period: "Gener 2026 — Maig 2026",
+          achievements: [
+            "Vaig construir el primer back-office de producte del domini de recàrrega i la seva documentació tècnica, donant a l’equip una referència compartida per operar i fer evolucionar el producte",
+            "Vaig refactoritzar més de 35.000 línies de l’ecosistema, inclosa la facturació, i vaig recollir les decisions de disseny i manteniment en un ADR",
+            "Vaig desenvolupar un hub d’operacions amb accés per rol i xarxa per a responsables de país, desplegament, Suport i Enginyeria",
+            "Vaig millorar l’operació amb proves d’integració, logs estructurats i alertes amb OpenTelemetry i Grafana; vaig construir ETLs a Databricks per a analítica",
+            "Vaig treballar amb Producte i altres departaments per convertir les restriccions tècniques en decisions compartides"
+          ]
+        },
+      ]
+    };
+  }
+  if (company.company === "Gartner Digital Markets") {
+    return {
+      ...company,
+      period: "Maig 2022 — Novembre 2025",
       location: "Barcelona, Espanya",
       description: "Equip de la Plataforma de Ressenyes que impulsa tots els marketplaces de Gartner Digital Markets (Capterra, GetApp, Software Advice). Processant milions de ressenyes de programari per generar informació fiable i accionable.",
       roles: [
         {
           ...company.roles[0],
           title: "Enginyer de Programari Senior",
-          period: "Octubre 2024 — Present",
+          period: "Octubre 2024 — Novembre 2025",
           achievements: [
             "Liderant enginyers junior i mid-level, realitzant entrevistes tècniques i revisions de codi",
             "Definint i implementant estàndards arquitectònics transversals entre equips",
@@ -191,7 +276,7 @@ const journeyCA = journeyEN.map((company, idx) => {
         }
       ]
     };
-  } else if (idx === 1) { // Plain Concepts
+  } else if (company.company === "Plain Concepts - SCRM Lidl Digital Hub") {
     return {
       ...company,
       period: "Setembre 2019 — Maig 2022",
@@ -223,7 +308,7 @@ const journeyCA = journeyEN.map((company, idx) => {
         }
       ]
     };
-  } else { // Pasiona
+  } else if (company.company === "Pasiona Consulting") {
     return {
       ...company,
       period: "Maig 2018 — Setembre 2019",
@@ -257,6 +342,7 @@ const journeyCA = journeyEN.map((company, idx) => {
       ]
     };
   }
+  return company;
 });
 
 export function getEngineeringJourney(locale: Locale) {
@@ -274,17 +360,17 @@ const educationES = educationEN.map(edu => ({
   ...edu,
   degree: edu.institution === "Universitat Oberta de Catalunya" 
     ? "Grado en Ingeniería Informática"
-    : edu.institution === "Escola Pia Mataró - Formació Professional"
+    : edu.institution === "Escola Pia Sant Anna, Mataró"
     ? "Técnico Superior en Desarrollo de Aplicaciones Multiplataforma"
     : "Grado en Ingeniería de Telecomunicaciones",
   period: edu.institution === "Universitat Oberta de Catalunya"
     ? "Sep 2021 — Presente"
-    : edu.institution === "Escola Pia Mataró - Formació Professional"
+    : edu.institution === "Escola Pia Sant Anna, Mataró"
     ? "2017 — 2019"
     : "Sep 2015 — 2017",
   description: edu.institution === "Universitat Oberta de Catalunya"
     ? "Actualmente cursando mi pasión por la Ingeniería Informática a mi propio ritmo, equilibrando trabajo y estudios. Enfocándome en arquitectura de software, sistemas distribuidos y aplicando la experiencia del mundo real al aprendizaje académico."
-    : edu.institution === "Escola Pia Mataró - Formació Professional"
+    : edu.institution === "Escola Pia Sant Anna, Mataró"
     ? "Certificación técnica en Desarrollo de Aplicaciones Multiplataforma (Educación Superior). Completado mientras trabajaba a tiempo completo, ganando experiencia práctica con Android Studio, SQL Server, Java, HTML y PHP. Esta cualificación profesional lanzó mi carrera en desarrollo de software."
     : "Comencé mi trayectoria universitaria aquí, completando 60 créditos ECTS en asignaturas básicas. Debido a circunstancias económicas, pausé mis estudios para enfocarme en el trabajo, lo que me llevó a descubrir mi verdadera pasión por el desarrollo de software.",
   status: edu.status === "In progress" ? "En curso" : edu.status === "Paused" ? "En pausa" : undefined
@@ -294,17 +380,17 @@ const educationCA = educationEN.map(edu => ({
   ...edu,
   degree: edu.institution === "Universitat Oberta de Catalunya"
     ? "Grau en Enginyeria Informàtica"
-    : edu.institution === "Escola Pia Mataró - Formació Professional"
+    : edu.institution === "Escola Pia Sant Anna, Mataró"
     ? "Tècnic Superior en Desenvolupament d'Aplicacions Multiplataforma"
     : "Grau en Enginyeria de Telecomunicacions",
   period: edu.institution === "Universitat Oberta de Catalunya"
     ? "Set 2021 — Present"
-    : edu.institution === "Escola Pia Mataró - Formació Professional"
+    : edu.institution === "Escola Pia Sant Anna, Mataró"
     ? "2017 — 2019"
     : "Set 2015 — 2017",
   description: edu.institution === "Universitat Oberta de Catalunya"
     ? "Actualment cursant la meva passió per l'Enginyeria Informàtica al meu propi ritme, equilibrant feina i estudis. Enfocant-me en arquitectura de programari, sistemes distribuïts i aplicant l'experiència del món real a l'aprenentatge acadèmic."
-    : edu.institution === "Escola Pia Mataró - Formació Professional"
+    : edu.institution === "Escola Pia Sant Anna, Mataró"
     ? "Certificació tècnica en Desenvolupament d'Aplicacions Multiplataforma (Educació Superior). Completat mentre treballava a temps complet, guanyant experiència pràctica amb Android Studio, SQL Server, Java, HTML i PHP. Aquesta qualificació professional va llançar la meva carrera en desenvolupament de programari."
     : "Vaig començar el meu trajecte universitari aquí, completant 60 crèdits ECTS en assignatures bàsiques. A causa de circumstàncies econòmiques, vaig pausar els meus estudis per enfocar-me en la feina, la qual cosa em va portar a descobrir la meva veritable passió pel desenvolupament de programari.",
   status: edu.status === "In progress" ? "En curs" : edu.status === "Paused" ? "En pausa" : undefined
@@ -438,17 +524,10 @@ const projectsES = projectsEN.map((project, idx) => {
   } else if (idx === 2) { // Rate Limiter Lab
     return {
       ...project,
-      title: "Rate Limiter Lab (en progreso)",
-      description: "Servicio distribuido de limitación de tasa construido en Go para aprendizaje y experimentación. Actualmente en progreso, pero todos los detalles técnicos y objetivos son visibles.",
-      longDescription: "Proyecto personal para explorar algoritmos y patrones de limitación de tasa distribuida. Implementando algoritmos de token bucket, sliding window y leaky bucket con Redis para gestión de estado distribuido. Enfocado en alto rendimiento, baja latencia y escalabilidad horizontal. El proyecto está siendo desarrollado activamente y todos los detalles técnicos, arquitectura y objetivos están documentados para transparencia.",
-      highlights: [
-        "Explorando diferentes algoritmos de limitación de tasa (token bucket, sliding window, leaky bucket)",
-        "Gestión de estado distribuido respaldada por Redis",
-        "Construyendo para alto rendimiento y baja latencia",
-        "Implementando observabilidad con Prometheus/Grafana",
-        "Aprendiendo patrones de concurrencia y mejores prácticas de Go",
-        "Documentando arquitectura y decisiones de diseño"
-      ]
+      title: "Rate Limiter Lab",
+      description: "Cinco algoritmos de limitación de peticiones implementados en Go y comparados bajo los mismos patrones de tráfico.",
+      longDescription: "Un laboratorio personal nacido de un pico de tráfico en producción. Token Bucket, Fixed Window, Leaky Bucket, Sliding Log y Sliding Counter comparten interfaz y se comparan con benchmarks, un generador de carga en Go y pruebas con k6. Los escenarios en Kubernetes/kind muestran las limitaciones de los contadores en memoria por réplica. El estado compartido con Redis es el siguiente paso.",
+      highlights: ["Cinco algoritmos implementados desde cero", "Benchmarks publicados con hardware y metodología", "Generador de carga con patrones estables, de ráfaga y sobrecarga", "Pruebas con k6 en local, kind y GitHub Actions", "Métricas para Prometheus y Grafana", "Escenarios con varias réplicas para estudiar la necesidad de estado compartido"]
     };
   } else if (idx === 3) { // AI-Powered Code Review Assistant
     return {
@@ -502,17 +581,10 @@ const projectsCA = projectsEN.map((project, idx) => {
   } else if (idx === 2) { // Rate Limiter Lab
     return {
       ...project,
-      title: "Rate Limiter Lab (en progrés)",
-      description: "Servei distribuït de limitació de taxa construït en Go per aprenentatge i experimentació. Actualment en progrés, però tots els detalls tècnics i objectius són visibles.",
-      longDescription: "Projecte personal per explorar algoritmes i patrons de limitació de taxa distribuïda. Implementant algoritmes de token bucket, sliding window i leaky bucket amb Redis per gestió d'estat distribuït. Enfocat en alt rendiment, baixa latència i escalabilitat horitzontal. El projecte s'està desenvolupant activament i tots els detalls tècnics, arquitectura i objectius estan documentats per transparència.",
-      highlights: [
-        "Explorant diferents algoritmes de limitació de taxa (token bucket, sliding window, leaky bucket)",
-        "Gestió d'estat distribuït recolzada per Redis",
-        "Construint per alt rendiment i baixa latència",
-        "Implementant observabilitat amb Prometheus/Grafana",
-        "Aprenent patrons de concurrència i millors pràctiques de Go",
-        "Documentant arquitectura i decisions de disseny"
-      ]
+      title: "Rate Limiter Lab",
+      description: "Cinc algoritmes de limitació de peticions implementats en Go i comparats sota els mateixos patrons de trànsit.",
+      longDescription: "Un laboratori personal nascut d’un pic de trànsit en producció. Token Bucket, Fixed Window, Leaky Bucket, Sliding Log i Sliding Counter comparteixen interfície i es comparen amb benchmarks, un generador de càrrega en Go i proves amb k6. Els escenaris a Kubernetes/kind mostren les limitacions dels comptadors en memòria per rèplica. L’estat compartit amb Redis és el pas següent.",
+      highlights: ["Cinc algoritmes implementats des de zero", "Benchmarks publicats amb maquinari i metodologia", "Generador de càrrega amb patrons estables, de ràfega i sobrecàrrega", "Proves amb k6 en local, kind i GitHub Actions", "Mètriques per a Prometheus i Grafana", "Escenaris amb diverses rèpliques per estudiar la necessitat d’estat compartit"]
     };
   } else if (idx === 3) { // AI-Powered Code Review Assistant
     return {

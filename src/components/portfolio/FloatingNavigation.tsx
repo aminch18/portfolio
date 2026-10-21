@@ -18,7 +18,8 @@ export function FloatingNavigation({ menuPosition, activeSection }: FloatingNavi
   const navItems = [
     { id: "home", label: t('common.portfolio') },
     { id: "journey", label: t('nav.journey') },
-    { id: "education", label: t('nav.education') },
+    { id: "architecture", label: t('nav.architecture') },
+    { id: "skills", label: t('nav.skills') },
     { id: "projects", label: t('nav.projects') },
   ];
 

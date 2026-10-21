@@ -57,23 +57,29 @@ export function CompanyCard({
             <div className="mb-4">
               <div className="flex items-center gap-4 mb-3">
                 {/* Company Logo */}
-                <div className="w-12 h-12 bg-white rounded-lg p-2 flex items-center justify-center flex-shrink-0">
-                  <img
-                    src={company.companyLogo}
-                    alt={`${company.company} logo`}
-                    className="w-full h-full object-contain"
-                    onError={(e) => {
-                      const target = e.target as HTMLImageElement;
-                      target.style.display = "none";
-                      const parent = target.parentElement;
-                      if (parent) {
-                        parent.innerHTML = `<span class='text-xs font-bold text-slate-800'>${company.companyFallback}</span>`;
-                        parent.className =
-                          "w-12 h-12 bg-white rounded-lg flex items-center justify-center flex-shrink-0";
-                      }
-                    }}
-                  />
-                </div>
+                {company.companyLogo ? (
+                  <div className="w-12 h-12 bg-white rounded-lg p-2 flex items-center justify-center flex-shrink-0">
+                    <img
+                      src={company.companyLogo}
+                      alt={`${company.company} logo`}
+                      className="w-full h-full object-contain"
+                      onError={(e) => {
+                        const target = e.target as HTMLImageElement;
+                        target.style.display = "none";
+                        const parent = target.parentElement;
+                        if (parent) {
+                          parent.innerHTML = `<span class='text-xs font-bold text-slate-800'>${company.companyFallback}</span>`;
+                          parent.className =
+                            "w-12 h-12 bg-white rounded-lg flex items-center justify-center flex-shrink-0";
+                        }
+                      }}
+                    />
+                  </div>
+                ) : (
+                  <div className="w-12 h-12 rounded-lg accent-bg flex items-center justify-center flex-shrink-0">
+                    <span className="text-sm font-bold text-white">{company.companyFallback}</span>
+                  </div>
+                )}
                 <div className="flex-1">
                   <h3 className="text-xl font-bold mb-1" style={{ color: 'var(--text-primary)' }}>
                     {company.company}
