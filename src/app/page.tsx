@@ -34,6 +34,7 @@ export default function Home() {
       }
     ],
     "knowsAbout": [
+      "Vertical Slice Architecture",
       "Software Engineering",
       ".NET",
       "C#",
@@ -45,6 +46,7 @@ export default function Home() {
       "Cloud Computing",
       "TypeScript",
       "PostgreSQL",
+      "MongoDB",
       "Docker",
       "Kubernetes"
     ],

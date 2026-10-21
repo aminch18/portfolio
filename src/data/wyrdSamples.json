@@ -1,0 +1,4 @@
+{
+  "process": "public static Process OrderFulfillment => Process\n    .StartOn<OrderPlaced>(e => e.OrderId)\n    .Then(Stock.Reserve).Retry(5.Times).Undo(Stock.Release)\n    .Then(Payments.Charge)\n        .Retry(5.Times, Backoff.Exponential)\n        .Undo(Payments.Refund)\n    .Await<PaymentConfirmed>(e => e.OrderId).Within(15.Minutes)\n    .Then(Shipping.Ship).Retry(5.Times)\n    .OnCompensated(Orders.Cancel).Retry(5.Times);",
+  "test": "var report = await Skuld.SimulateAsync(\n    ShopModule.CreateRuntime,\n    BusyAfternoon,\n    [Invariant.ProcessesSettle,\n     StockIsConserved,\n     EveryOrderEndsOrIsFlagged],\n    new SimulationOptions {\n        Runs = 5_000,\n        FaultRate = 0.2,\n        DuplicateRate = 0.2,\n        ReorderRate = 0.5\n    });\n\nreport.ThrowIfViolated();"
+}

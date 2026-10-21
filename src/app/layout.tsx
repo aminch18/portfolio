@@ -3,8 +3,10 @@ import './globals.css'
 import { I18nProvider } from '../i18n/provider'
 
 export const metadata: Metadata = {
-  title: 'Amin Chouaibi El Azaar | Senior Backend Engineer | .NET, AWS, Kafka',
-  description: 'Senior Software Engineer at Gartner Digital Markets with 6+ years building scalable distributed systems. Expert in .NET/C#, AWS, Kafka, microservices, event-driven architectures, and cloud platforms. Based in Barcelona, Spain.',
+  metadataBase: new URL('https://aminch18.github.io/portfolio/'),
+  icons: { icon: `${process.env.NODE_ENV === 'production' ? '/portfolio' : ''}/icon.svg` },
+  title: 'Amin Chouaibi | Software Engineer · Projects & Writing',
+  description: 'Software engineer focused on backend, Vertical Slice Architecture and distributed systems. Projects, technical writing and reflections on technology, teams and people. Based in Barcelona.',
   keywords: [
     'Amin Chouaibi',
     'Backend Engineer',
@@ -19,7 +21,6 @@ export const metadata: Metadata = {
     'Distributed Systems',
     'Cloud Engineer',
     'Barcelona Software Engineer',
-    'Gartner Digital Markets',
     'TypeScript Developer',
     'PostgreSQL',
     'Docker Kubernetes',
@@ -47,13 +48,13 @@ export const metadata: Metadata = {
     locale: 'en_US',
     alternateLocale: ['es_ES', 'ca_ES'],
     url: 'https://aminch18.github.io/portfolio',
-    title: 'Amin Chouaibi El Azaar | Senior Backend Engineer',
-    description: 'Senior Software Engineer specializing in .NET, AWS, Kafka, and distributed systems. Building scalable platforms at Gartner Digital Markets in Barcelona.',
-    siteName: 'Amin Chouaibi Portfolio',
+    title: 'Amin Chouaibi El Azaar | Senior Software Engineer',
+    description: 'Backend, Vertical Slice Architecture and distributed systems. Explore my projects, experiments and engineering journey.',
+    siteName: 'Amin Chouaibi',
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Amin Chouaibi El Azaar | Senior Backend Engineer',
+    title: 'Amin Chouaibi El Azaar | Senior Software Engineer',
     description: 'Senior Software Engineer specializing in .NET, AWS, Kafka, and distributed systems.',
   },
   verification: {

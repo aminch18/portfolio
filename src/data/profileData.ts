@@ -25,21 +25,41 @@ export const engineeringJourney: Company[] = [
     company: "Schwarz Digits",
     period: "Jan 2026 — Present",
     location: "Barcelona, Spain (hybrid)",
-    description: "Lidl Plus eMobility — the EV-charging product integrated into the Lidl Plus and Kaufland apps. Defining technical solutions end-to-end with a strong product mindset.",
+    description: "From EV charging and telecom operations to enterprise AI: I work across backend, product and platform challenges at Schwarz Digits. I now contribute to the newly formed team building the group's enterprise AI platform.",
     icon: Rocket,
     side: "left",
-    companyLogo: "",
+    companyLogo: "/companies/schwarz-digits.svg",
     companyFallback: "SD",
     roles: [
       {
-        title: "Senior Software Engineer · Full-Stack",
-        period: "Jan 2026 — Present",
+        title: "Senior Software Engineer · Enterprise AI Platform",
+        period: "Oct 2026 — Present",
         achievements: [
-          "Refactored 35k+ lines across the eMobility ecosystem in under 5 months, leaving the codebase clean, documented and scalable",
-          "Designed and built an internal SaaS-style operations hub (RBAC, network-scoped) used across markets",
-          "Lifted reliability and observability with integration tests, structured logging and metric-based alerts (OpenTelemetry + Mimir/Grafana)",
-          "Built Databricks ETLs for analytics and authored ADRs capturing architectural direction",
-          "Introduced cross-team practice changes and partnered with Product on an emerging AI assistant strategy"
+          "Joined the newly formed senior engineering team building Schwarz Group's enterprise AI platform",
+          "Before joining the team, explored platform building blocks through Kubernetes PoCs, AI Gateway evaluations and workflow / agent orchestration experiments"
+        ],
+        technologies: ["Kubernetes", "AI Gateways", "Workflow Orchestration", "AI Agents"]
+      },
+      {
+        title: "Senior Software Engineer · Lidl Connect",
+        period: "May 2026 — Oct 2026",
+        achievements: [
+          "Helped build the foundations of a pan-European mobile service within a cross-functional task force, connecting the product to the Lidl Plus ecosystem",
+          "Turned operational needs into a PRD and architecture for a new SaaS covering country configuration and workflows for Support, Product and Engineering; handed the design over for implementation when moving to the AI team",
+          "Designed service integrations around Sagas, the Outbox pattern and RabbitMQ to keep distributed workflows consistent and resilient",
+          "Owned load and performance testing to assess throughput and resilience before launch"
+        ],
+        technologies: ["Event-Driven Architecture", "RabbitMQ", "Sagas", "Outbox Pattern", "Performance Testing"]
+      },
+      {
+        title: "Senior Software Engineer · Lidl Plus eMobility",
+        period: "Jan 2026 — May 2026",
+        achievements: [
+          "Built the charging domain's first product back-office and documented how it works, giving teams a shared reference for operating and evolving the product",
+          "Refactored 35k+ lines across the charging ecosystem, including billing, and captured design and maintenance decisions in an ADR",
+          "Built an operations hub with role-based and network-scoped access for Country Managers, rollout, Support and Engineering",
+          "Made services easier to operate with integration tests, structured logs and OpenTelemetry / Grafana alerts; built Databricks ETLs for analytics",
+          "Worked with Product and other departments to turn technical constraints into shared decisions"
         ],
         technologies: ["C#", ".NET", "TypeScript", "Next.js", "STACKIT", "NATS JetStream", "PostgreSQL", "OpenTelemetry", "Grafana", "Databricks"]
       }
@@ -52,7 +72,7 @@ export const engineeringJourney: Company[] = [
     description: "Reviews Platform team powering all Gartner Digital Markets marketplaces (Capterra, GetApp, Software Advice). Processing millions of software reviews to generate reliable, actionable insights.",
     icon: Target,
     side: "right",
-    companyLogo: "https://emt.gartnerweb.com/ngw/commonassets/images/build-graphics/gartner-logos/gartner.svg",
+    companyLogo: "/companies/gartner.svg",
     companyFallback: "GDM",
     roles: [
       {
@@ -88,7 +108,7 @@ export const engineeringJourney: Company[] = [
     description: "Working on Lidl Plus App project serving more than 60 million users. High-availability backend system based on microservices, cloud, data analysis, and real-time data ingestion.",
     icon: Zap,
     side: "left",
-    companyLogo: "https://www.plainconcepts.com/wp-content/uploads/2023/01/logo.svg",
+    companyLogo: "/companies/plain-concepts.svg",
     companyFallback: "PC",
     roles: [
       {
@@ -123,7 +143,7 @@ export const engineeringJourney: Company[] = [
     description: "Dual internship program and early career development focusing on both Front-end and Back-end development with SharePoint Online and Azure Functions.",
     icon: Users,
     side: "right",
-    companyLogo: "https://pasiona.com/wp-content/themes/pasiona_theme/assets/svg/pasiona-logo.svg",
+    companyLogo: "/companies/pasiona.svg",
     companyFallback: "PA",
     roles: [
       {
@@ -347,17 +367,17 @@ export const projects: Project[] = [
     status: "completed"
   },
   {
-    title: "Rate Limiter Lab (in progress)",
-    description: "Distributed rate limiting service built in Go for learning and experimentation. Currently in progress, but all technical details and goals are visible.",
-    longDescription: "Personal project to explore distributed rate limiting algorithms and patterns. Implementing token bucket, sliding window, and leaky bucket algorithms with Redis for distributed state management. Focusing on high performance, low latency, and horizontal scalability. The project is actively being developed and all technical details, architecture, and goals are documented for transparency.",
-    technologies: ["Go", "Redis", "Docker", "Kubernetes", "Prometheus", "Grafana"],
+    title: "Rate Limiter Lab",
+    description: "Five rate-limiting algorithms implemented in Go and compared under the same traffic patterns.",
+    longDescription: "A personal lab built after a production traffic spike: Token Bucket, Fixed Window, Leaky Bucket, Sliding Log and Sliding Counter share one interface and are compared through benchmarks, a Go load generator and k6 tests. Includes Kubernetes/kind scenarios that expose the limits of per-replica in-memory counters. Shared state with Redis is a next step.",
+    technologies: ["Go", "k6", "Docker", "Kubernetes", "Prometheus", "Grafana"],
     highlights: [
-      "Exploring different rate limiting algorithms (token bucket, sliding window, leaky bucket)",
-      "Redis-backed distributed state management",
-      "Building for high throughput and low latency",
-      "Implementing observability with Prometheus/Grafana",
-      "Learning Go concurrency patterns and best practices",
-      "Documenting architecture and design decisions"
+      "Five algorithms implemented from scratch behind one interface",
+      "Published comparative benchmarks with hardware and methodology",
+      "Go load generator with steady, burst and overload patterns",
+      "k6 tests running locally, in kind and through GitHub Actions",
+      "Per-algorithm metrics for Prometheus and Grafana",
+      "Multi-replica scenarios demonstrate why shared state is needed"
     ],
     status: "in-progress",
     github: "https://github.com/aminch18/rate-limiter-labs"
@@ -380,8 +400,8 @@ export const projects: Project[] = [
 
 export const profile = {
   name: "Amin Chouaibi El Azaar",
-  title: "Senior Backend Engineer",
-  summary: `Passionate about technology, software engineering, and security. My journey started in Barcelona, where curiosity for distributed systems and cloud architecture shaped my career. I believe in building reliable, scalable, and secure systems that empower people and businesses. Technology is not just a tool, but a way to solve real-world problems and create meaningful impact.`,
+  title: "Senior Software Engineer · Backend & Platforms",
+  summary: "I build the systems behind the product: services that communicate reliably, tools that make operations easier, and platforms other teams can build on. Over 8+ years, that has taken me from Lidl Plus to Gartner’s review marketplaces and back to Schwarz Digits, where I have joined the newly formed enterprise AI platform team. My focus is turning complex requirements into systems people can understand, operate and evolve.",
   location: "Barcelona, Spain",
   interests: ["Distributed Systems", "Cloud Architecture", "Security", "AI", "Open Source"],
   photo: "/hero-image.png",

@@ -1,82 +1,54 @@
 "use client";
 import React, { createContext, useContext, useState, useEffect } from 'react';
 import { Locale, defaultLocale, locales } from './config';
+import en from './messages/en.json';
+import es from './messages/es.json';
+import ca from './messages/ca.json';
 
-type Messages = Record<string, any>;
-
+type Messages = Record<string, unknown>;
 interface I18nContextType {
   locale: Locale;
   setLocale: (locale: Locale) => void;
   t: (key: string) => string;
   messages: Messages;
 }
-
 const I18nContext = createContext<I18nContextType | undefined>(undefined);
-
 const LOCALE_STORAGE_KEY = 'portfolio-locale';
+const dictionaries: Record<Locale, Messages> = { en, es, ca };
 
 export function I18nProvider({ children }: { children: React.ReactNode }) {
+  // Render the default language on the server too, then restore the visitor's preference.
   const [locale, setLocaleState] = useState<Locale>(defaultLocale);
-  const [messages, setMessages] = useState<Messages>({});
-  const [isLoading, setIsLoading] = useState(true);
-
   useEffect(() => {
-    // Load saved locale or detect browser language
-    const saved = localStorage.getItem(LOCALE_STORAGE_KEY) as Locale;
-    const browserLang = navigator.language.split('-')[0];
-    const initial = saved || (locales.includes(browserLang as Locale) ? browserLang as Locale : defaultLocale);
-    
-    loadMessages(initial);
+    let saved: string | null = null;
+    try { saved = localStorage.getItem(LOCALE_STORAGE_KEY); } catch {}
+    const browserLanguage = navigator.language.split('-')[0] as Locale;
+    const initial = saved && locales.includes(saved as Locale)
+      ? saved as Locale
+      : locales.includes(browserLanguage) ? browserLanguage : defaultLocale;
+    setLocaleState(initial);
+    document.documentElement.lang = initial;
   }, []);
 
-  const loadMessages = async (newLocale: Locale) => {
-    try {
-      const msgs = await import(`./messages/${newLocale}.json`);
-      setMessages(msgs.default);
-      setLocaleState(newLocale);
-      localStorage.setItem(LOCALE_STORAGE_KEY, newLocale);
-      document.documentElement.lang = newLocale;
-      setIsLoading(false);
-    } catch (error) {
-      console.error(`Failed to load messages for locale: ${newLocale}`, error);
-      setIsLoading(false);
-    }
+  const setLocale = (next: Locale) => {
+    setLocaleState(next);
+    document.documentElement.lang = next;
+    try { localStorage.setItem(LOCALE_STORAGE_KEY, next); } catch {}
   };
-
-  const setLocale = (newLocale: Locale) => {
-    loadMessages(newLocale);
-  };
-
+  const messages = dictionaries[locale];
   const t = (key: string): string => {
-    const keys = key.split('.');
-    let value: any = messages;
-    
-    for (const k of keys) {
-      if (value && typeof value === 'object') {
-        value = value[k];
-      } else {
-        return key; // Return key if translation not found
-      }
+    let value: unknown = messages;
+    for (const part of key.split('.')) {
+      if (!value || typeof value !== 'object') return key;
+      value = (value as Messages)[part];
     }
-    
     return typeof value === 'string' ? value : key;
   };
-
-  if (isLoading) {
-    return null; // or a loading spinner
-  }
-
-  return (
-    <I18nContext.Provider value={{ locale, setLocale, t, messages }}>
-      {children}
-    </I18nContext.Provider>
-  );
+  return <I18nContext.Provider value={{ locale, setLocale, t, messages }}>{children}</I18nContext.Provider>;
 }
 
 export function useI18n() {
   const context = useContext(I18nContext);
-  if (!context) {
-    throw new Error('useI18n must be used within I18nProvider');
-  }
+  if (!context) throw new Error('useI18n must be used within I18nProvider');
   return context;
 }
