@@ -1,6 +1,6 @@
 "use client";
 import React, { useState, useEffect } from "react";
-import { Mail, MapPin, FileText, MessageCircle, Linkedin, Github } from "lucide-react";
+import { MapPin, FileText, MessageCircle, Linkedin, Github } from "lucide-react";
 import { profile } from "../../data/profileData";
 import { ContactForm } from "./ContactForm";
 import { useI18n } from "../../i18n/provider";
@@ -142,10 +142,6 @@ export function HeroSection({ isLoaded }: HeroSectionProps) {
                 <MapPin className="w-5 h-5" style={{ color: "var(--accent-primary)" }} />
                 <span>{profileData.location}</span>
               </div>
-              <div className="flex items-center gap-2">
-                <Mail className="w-5 h-5" style={{ color: "var(--accent-primary)" }} />
-                <span className="text-sm sm:text-base break-all">{profile.email}</span>
-              </div>
             </div>
 
             <div className="max-w-3xl mx-auto mb-10">
@@ -162,8 +158,9 @@ export function HeroSection({ isLoaded }: HeroSectionProps) {
                 <FileText className="w-5 h-5" />
                 <span>{t("hero.requestCV")}</span>
               </button>
-              <a
-                href={`mailto:${profile.email}`}
+              <button
+                type="button"
+                onClick={() => setIsContactFormOpen(true)}
                 className="flex items-center justify-center gap-3 px-8 py-4 rounded-xl font-semibold transform transition-all duration-300 hover:scale-105"
                 style={{
                   border: "1px solid var(--border-strong)",
@@ -173,7 +170,7 @@ export function HeroSection({ isLoaded }: HeroSectionProps) {
               >
                 <MessageCircle className="w-5 h-5" style={{ color: "var(--accent-primary)" }} />
                 <span>{t("hero.letsTalk")}</span>
-              </a>
+              </button>
             </div>
 
             {/* Social Links */}

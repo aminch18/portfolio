@@ -53,8 +53,7 @@ export default function Home() {
     "sameAs": [
       "https://www.linkedin.com/in/amin-chouaibi-el-azaar/",
       "https://github.com/aminch18"
-    ],
-    "email": "experimentalaminch@outlook.com"
+    ]
   };
 
   return (

@@ -78,7 +78,7 @@
     "successTitle": "Message Sent!",
     "successMessage": "Thank you for reaching out. I'll get back to you as soon as possible.",
     "errorTitle": "Oops! Something went wrong",
-    "errorMessage": "Please try again or contact me directly at",
+    "errorMessage": "Please try again, or reach out on",
     "close": "Close"
   }
 }

@@ -406,6 +406,5 @@ export const profile = {
   interests: ["Distributed Systems", "Cloud Architecture", "Security", "AI", "Open Source"],
   photo: "/hero-image.png",
   linkedin: "https://www.linkedin.com/in/amin-chouaibi-el-azaar/",
-  github: "https://github.com/aminch18",
-  email: "experimentalaminch@outlook.com"
+  github: "https://github.com/aminch18"
 };
