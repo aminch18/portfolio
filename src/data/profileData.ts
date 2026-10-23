@@ -25,27 +25,27 @@ export const engineeringJourney: Company[] = [
     company: "Schwarz Digits",
     period: "Jan 2026 — Present",
     location: "Barcelona, Spain (hybrid)",
-    description: "From EV charging and telecom operations to enterprise AI: I work across backend, product and platform challenges at Schwarz Digits. I now contribute to the newly formed team building the group's enterprise AI platform.",
+    description: "Backend and platform engineering at Schwarz Digits, with experience across EV charging and telecom operations in the Lidl Plus ecosystem.",
     icon: Rocket,
     side: "left",
     companyLogo: "/companies/schwarz-digits.svg",
     companyFallback: "SD",
     roles: [
       {
-        title: "Senior Software Engineer · Enterprise AI Platform",
+        title: "Senior Software Engineer · Backend & Platforms",
         period: "Oct 2026 — Present",
         achievements: [
-          "Joined the newly formed senior engineering team building Schwarz Group's enterprise AI platform",
-          "Before joining the team, explored platform building blocks through Kubernetes PoCs, AI Gateway evaluations and workflow / agent orchestration experiments"
+          "Backend engineering and system design, with a focus on maintainable and reliable software",
+          "Technical exploration and evaluation of architectural alternatives"
         ],
-        technologies: ["Kubernetes", "AI Gateways", "Workflow Orchestration", "AI Agents"]
+        technologies: ["C#", ".NET", "System Design"]
       },
       {
         title: "Senior Software Engineer · Lidl Connect",
         period: "May 2026 — Oct 2026",
         achievements: [
           "Helped build the foundations of a pan-European mobile service within a cross-functional task force, connecting the product to the Lidl Plus ecosystem",
-          "Turned operational needs into a PRD and architecture for a new SaaS covering country configuration and workflows for Support, Product and Engineering; handed the design over for implementation when moving to the AI team",
+          "Turned operational needs into a PRD and architecture for a new SaaS covering country configuration and workflows for Support, Product and Engineering; handed the design over for implementation",
           "Designed service integrations around Sagas, the Outbox pattern and RabbitMQ to keep distributed workflows consistent and resilient",
           "Owned load and performance testing to assess throughput and resilience before launch"
         ],
@@ -401,7 +401,7 @@ export const projects: Project[] = [
 export const profile = {
   name: "Amin Chouaibi El Azaar",
   title: "Senior Software Engineer · Backend & Platforms",
-  summary: "I build the systems behind the product: services that communicate reliably, tools that make operations easier, and platforms other teams can build on. Over 8+ years, that has taken me from Lidl Plus to Gartner’s review marketplaces and back to Schwarz Digits, where I have joined the newly formed enterprise AI platform team. My focus is turning complex requirements into systems people can understand, operate and evolve.",
+  summary: "I build backend services, distributed systems and tools that make complex workflows easier to understand and operate. My approach combines clear domain boundaries, Vertical Slice Architecture and practical testing. I also explore ideas through personal projects and writing.",
   location: "Barcelona, Spain",
   interests: ["Distributed Systems", "Cloud Architecture", "Security", "AI", "Open Source"],
   photo: "/hero-image.png",

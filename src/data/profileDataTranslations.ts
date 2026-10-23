@@ -14,7 +14,7 @@ import {
 const profileES = {
   ...profileEN,
   title: "Ingeniero de Software Senior · Backend y Plataformas",
-  summary: "Construeixo els sistemes que fan funcionar un producte: serveis que es comuniquen de manera fiable, eines que faciliten les operacions i plataformes sobre les quals altres equips poden treballar. En més de vuit anys he passat per Lidl Plus, els marketplaces de ressenyes de Gartner i Schwarz Digits, on ara formo part de l’equip acabat de crear per a la plataforma corporativa d’IA. M’interessa convertir problemes complexos en sistemes que es puguin entendre, operar i fer evolucionar.",
+  summary: "Construyo servicios backend, sistemas distribuidos y herramientas que hacen más comprensibles y operables los procesos complejos. Combino límites de dominio claros, Vertical Slice Architecture y pruebas prácticas. También exploro ideas a través de proyectos personales y escritos.",
   location: "Barcelona, España",
   interests: ["Sistemas Distribuidos", "Arquitectura Cloud", "Seguridad", "IA", "Código Abierto"]
 };
@@ -23,7 +23,7 @@ const profileES = {
 const profileCA = {
   ...profileEN,
   title: "Enginyer de Programari Sènior · Backend i Plataformes",
-  summary: "Construeixo els sistemes que fan funcionar un producte: serveis que es comuniquen de manera fiable, eines que faciliten les operacions i plataformes sobre les quals altres equips poden treballar. En més de vuit anys he passat per Lidl Plus, els marketplaces de ressenyes de Gartner i Schwarz Digits, on ara formo part de l’equip acabat de crear per a la plataforma corporativa d’IA. M’interessa convertir problemes complexos en sistemes que es puguin entendre, operar i fer evolucionar.",
+  summary: "Construeixo serveis backend, sistemes distribuïts i eines que fan més comprensibles i operables els processos complexos. Combino límits de domini clars, Vertical Slice Architecture i proves pràctiques. També exploro idees a través de projectes personals i escrits.",
   location: "Barcelona, Espanya",
   interests: ["Sistemes Distribuïts", "Arquitectura Cloud", "Seguretat", "IA", "Codi Obert"]
 };
@@ -61,16 +61,13 @@ const journeyES = journeyEN.map((company) => {
       ...company,
       period: "Enero 2026 — Presente",
       location: "Barcelona, España (híbrido)",
-      description: "De la recarga eléctrica y las operaciones de telecomunicaciones a la IA corporativa. En Schwarz Digits trabajo entre backend, producto y plataformas; ahora, dentro del equipo recién creado para construir la plataforma de IA del grupo.",
+      description: "Ingeniería de backend y plataformas en Schwarz Digits, con experiencia en recarga eléctrica y operaciones de telecomunicaciones dentro del ecosistema Lidl Plus.",
       roles: [
         {
           ...company.roles[0],
-          title: "Ingeniero de Software Senior · Plataforma de IA Corporativa",
+          title: "Ingeniero de Software Senior · Backend y Plataformas",
           period: "Octubre 2026 — Presente",
-          achievements: [
-            "Me he incorporado al equipo senior recién creado para construir la plataforma corporativa de IA de Schwarz Group",
-            "Antes de incorporarme al equipo, exploré piezas de la plataforma con pruebas de concepto en Kubernetes, evaluación de AI Gateways y experimentos de orquestación de workflows y agentes"
-          ]
+          achievements: ["Ingeniería backend y diseño de sistemas, con foco en software mantenible y fiable", "Exploración técnica y evaluación de alternativas de arquitectura"]
         },
         {
           ...company.roles[1],
@@ -78,7 +75,7 @@ const journeyES = journeyEN.map((company) => {
           period: "Mayo 2026 — Octubre 2026",
           achievements: [
             "Participé en el equipo multidisciplinar que sentó las bases de un nuevo operador móvil paneuropeo conectado al ecosistema Lidl Plus",
-            "Traduje las necesidades de operaciones a un PRD y al diseño de un SaaS para gestionar configuración por país y procesos de Soporte, Producto e Ingeniería; dejé la arquitectura preparada para su implementación al pasar al equipo de IA",
+            "Traduje las necesidades de operaciones a un PRD y al diseño de un SaaS para gestionar configuración por país y procesos de Soporte, Producto e Ingeniería; dejé la arquitectura preparada para su implementación",
             "Diseñé integraciones entre servicios con Sagas, el patrón Outbox y RabbitMQ para mantener la consistencia y la resiliencia de los procesos distribuidos",
             "Me responsabilicé de las pruebas de carga y rendimiento para evaluar la capacidad y la resiliencia antes del lanzamiento"
           ]
@@ -206,16 +203,13 @@ const journeyCA = journeyEN.map((company) => {
       ...company,
       period: "Gener 2026 — Present",
       location: "Barcelona, Espanya (híbrid)",
-      description: "De la recàrrega elèctrica i les operacions de telecomunicacions a la IA corporativa. A Schwarz Digits treballo entre backend, producte i plataformes; ara, dins de l’equip acabat de crear per construir la plataforma d’IA del grup.",
+      description: "Enginyeria de backend i plataformes a Schwarz Digits, amb experiència en recàrrega elèctrica i operacions de telecomunicacions dins de l’ecosistema Lidl Plus.",
       roles: [
         {
           ...company.roles[0],
-          title: "Enginyer de Programari Sènior · Plataforma d’IA Corporativa",
+          title: "Enginyer de Programari Sènior · Backend i Plataformes",
           period: "Octubre 2026 — Present",
-          achievements: [
-            "M’he incorporat a l’equip sènior acabat de crear per construir la plataforma corporativa d’IA de Schwarz Group",
-            "Abans d’incorporar-me a l’equip, vaig explorar peces de la plataforma amb proves de concepte a Kubernetes, avaluació d’AI Gateways i experiments d’orquestració de workflows i agents"
-          ]
+          achievements: ["Enginyeria backend i disseny de sistemes, amb focus en programari mantenible i fiable", "Exploració tècnica i avaluació d’alternatives d’arquitectura"]
         },
         {
           ...company.roles[1],
@@ -223,7 +217,7 @@ const journeyCA = journeyEN.map((company) => {
           period: "Maig 2026 — Octubre 2026",
           achievements: [
             "Vaig participar en l’equip multidisciplinari que va posar les bases d’un nou operador mòbil paneuropeu connectat a l’ecosistema Lidl Plus",
-            "Vaig traduir les necessitats d’operacions en un PRD i en el disseny d’un SaaS per gestionar la configuració per país i els processos de Suport, Producte i Enginyeria; vaig deixar l’arquitectura preparada per implementar-la en passar a l’equip d’IA",
+            "Vaig traduir les necessitats d’operacions en un PRD i en el disseny d’un SaaS per gestionar la configuració per país i els processos de Suport, Producte i Enginyeria; vaig deixar l’arquitectura preparada per implementar-la",
             "Vaig dissenyar integracions entre serveis amb Sagas, el patró Outbox i RabbitMQ per mantenir la consistència i la resiliència dels processos distribuïts",
             "Em vaig responsabilitzar de les proves de càrrega i rendiment per avaluar la capacitat i la resiliència abans del llançament"
           ]

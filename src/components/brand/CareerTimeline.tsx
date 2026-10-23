@@ -9,7 +9,7 @@ import { CompanyLogo } from './CompanyLogo';
 
 const yearMarkers = ['2026', '2022', '2019', '2018'];
 const paths = [
-  ['eMobility', 'Lidl Connect', 'Enterprise AI'],
+  ['eMobility', 'Lidl Connect', 'Backend & Platforms'],
   ['Capterra', 'GetApp', 'Software Advice'],
   ['Lidl Plus', 'Alerts', 'Azure'],
   ['Full-stack', '.NET', 'React'],
@@ -38,7 +38,7 @@ export function CareerTimeline({ onOpenCase }: { onOpenCase: (index: number) => 
             </summary>
             <div className="timeline-roles">
               {company.roles.map((role, roleIndex) => {
-                const caseIndex = index === 0 ? roleIndex === 1 ? 1 : roleIndex === 2 ? 0 : null : index === 1 && roleIndex === 1 ? 2 : index === 2 && roleIndex === 0 ? 3 : null;
+                const caseIndex = index === 0 ? role.title.includes('Lidl Connect') ? 1 : role.title.includes('eMobility') ? 0 : null : index === 1 && roleIndex === 1 ? 2 : index === 2 && roleIndex === 0 ? 3 : null;
                 return <details key={role.title} className="timeline-role" open={index === 0 && roleIndex === 0}>
                   <summary><span className="role-branch" aria-hidden="true"><GitBranch size={13}/></span><div><span className="timeline-role-date">{role.period}</span><h4>{role.title}</h4></div><ChevronDown className="role-chevron" size={14}/></summary>
                   <div className="timeline-role-content"><ul>{role.achievements.map(achievement => <li key={achievement}>{achievement}</li>)}</ul><div className="timeline-role-stack">{role.technologies.map(tech => <span key={tech}>{tech}</span>)}</div>{caseIndex !== null && <button type="button" className="text-link timeline-case-link" onClick={() => onOpenCase(caseIndex)}>{c.explore}<ArrowUpRight size={15}/></button>}</div>
